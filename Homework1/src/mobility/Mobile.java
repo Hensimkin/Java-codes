@@ -1,13 +1,14 @@
 package mobility;
+import java.lang.Math;
 
 public abstract class Mobile implements Ilocatable  {
 
 	private Point location;
 	private double totalDistance;
 	
-	public Mobile()
+	public Mobile(Point p)
 	{
-		Point location=new Point();
+		this.location=new Point(p);
 		this.totalDistance=1;
 	}
 	public void addTotalDistance(double d)
@@ -17,7 +18,7 @@ public abstract class Mobile implements Ilocatable  {
 	
 	public double calcDistance(Point p)
 	{
-		
+		return Math.sqrt(Math.pow(this.location.getX()-p.getX(),2)+Math.pow(this.location.getX()-p.getX(),2));
 	}
 	
 	public static double move(Point p)
