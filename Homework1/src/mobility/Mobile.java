@@ -12,6 +12,6 @@ public abstract class Mobile implements Ilocatable  {
 	}
 	void addTotalDistance(double d)
 	{
-		
+		this.totalDistance=5;
 	}
 }
