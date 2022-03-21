@@ -21,8 +21,8 @@ public abstract class Mobile implements Ilocatable  {
 		return Math.sqrt(Math.pow(this.location.getX()-p.getX(),2)+Math.pow(this.location.getX()-p.getX(),2));
 	}
 	
-	public static double move(Point p)
+	//public static double move(Point p)
 	{
-		return p.totalDistance;
+		//return p.totalDistance;
 	}
 }
