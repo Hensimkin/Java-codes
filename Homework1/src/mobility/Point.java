@@ -5,6 +5,8 @@ public class Point
 
 	private int x;
 	private int y;
+	final int max_x=800;
+	final int max_y=600;
 	
 	public Point()
 	{
@@ -20,7 +22,7 @@ public class Point
 	
 	public boolean setX(int x)
 	{
-		if (x<0||x>800)
+		if (x>0||max_x<800)
 		{
 			this.x=x;
 			return true;
@@ -34,7 +36,7 @@ public class Point
 	
 	public boolean setY(int y)
 	{
-		if (y<0||x>600)
+		if (y>0||max_y<600)
 		{
 			this.y=y;
 			return true;
