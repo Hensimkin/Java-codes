@@ -4,6 +4,7 @@ import food.EFoodType;
 import food.IEdible;
 import mobility.Point;
 import diet.IDiet;
+import utilities.MessageUtility;
 
 public class Lion extends Animal
 {
@@ -18,6 +19,13 @@ public class Lion extends Animal
 		
 	}
 	
+	public Lion(String name,Point point)
+	{
+		super(name,point);
+		super.setWeight(408.2);
+		
+	}
+	
 	public boolean eat(IEdible food)
 	{
 		return true;
@@ -25,13 +33,19 @@ public class Lion extends Animal
 	
 	public void makeSound()
 	{
-		
+		roar();
+	}
+	
+	public void roar()
+	{
+		MessageUtility.logSound(this.getName(), "Roars, then stretches and shakes its mane");
 	}
 	
 	public EFoodType getFoodtype()
 	{
-		
+		return EFoodType.NOTFOOD;
 	}
+	
 
 	
 	
