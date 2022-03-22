@@ -1,8 +1,8 @@
 package animal;
 import diet.IDiet;
-import mobility.Point;
+import mobility.*;
 import food.IEdible;
-public abstract class Animal  extends Point implements  IEdible
+public abstract class Animal  extends Mobile implements  IEdible
 {
 	private String name;
 	private double  weight=0;
