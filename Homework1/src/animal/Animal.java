@@ -6,9 +6,12 @@ public abstract class Animal
 	private double  weight;
 	private IDiet diet;
 	
-	public Animal()
-	{
-		
-	}
+	public Animal();
+	
+	public void makeSound();
+	
+	boolean eat(IEdible food)
+
+	
 
 }

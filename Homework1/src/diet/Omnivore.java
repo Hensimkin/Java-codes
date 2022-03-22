@@ -1,12 +1,10 @@
 package diet;
-
 import food.EFoodType;
-
-public class Carnivore implements IDiet
+public class Omnivore 
 {
 	public boolean  canEat(EFoodType food)
 	{
-		if (food==EFoodType.MEAT)
+		if (food==EFoodType.MEAT or )
 		{
 			return true;
 		}
