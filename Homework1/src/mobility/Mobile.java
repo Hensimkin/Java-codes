@@ -8,7 +8,7 @@ public abstract class Mobile implements Ilocatable  {
 	
 	public Mobile(Point p)
 	{
-		this.location=new Point(p);
+		this.location=new Point(p.getX(),p.getY());
 		this.totalDistance=1;
 	}
 	public void addTotalDistance(double d)
