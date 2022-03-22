@@ -1,11 +1,12 @@
 package animal;
 import diet.IDiet;
 import mobility.Point;
+import food.EFoodType;
 import food.IEdible;
 public abstract class Animal  extends Point implements  IEdible
 {
 	private String name;
-	private double  weight=0;
+	private double weight=0;
 	private IDiet diet;
 	
 	public Animal(String name,Point point)
@@ -22,6 +23,7 @@ public abstract class Animal  extends Point implements  IEdible
 	{
 		this.weight=weight;
 	}
+
 
 	
 

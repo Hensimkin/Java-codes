@@ -7,8 +7,8 @@ import diet.IDiet;
 
 public class Lion extends Animal
 {
-	final static Point start=new Point(20,0);
-	final static IDiet Meat=new Carnivore();
+	private final static Point start=new Point(20,0);
+	private final static IDiet Meat=new Carnivore();
 	private int scarCount=0;
 	
 	public Lion(String name)
