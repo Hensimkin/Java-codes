@@ -20,16 +20,15 @@ public class Point
 		setY(y);
 	}
 	
-	public Point(Point point)
+	public Point(Point p)
 	{
-		Point newpoint=new Point();
-		newpoint.x=point.getX();
-		newpoint.y=point.getY();
+		this.x=p.getX();
+		this.y=p.getY();
 	}
 	
 	public boolean setX(int x)
 	{
-		if (x>0&&max_x<800)
+		if (x>=0&&max_x<=800)
 		{
 			this.x=x;
 			return true;
@@ -43,7 +42,7 @@ public class Point
 	
 	public boolean setY(int y)
 	{
-		if (y>0&&max_y<600)
+		if (y>=0&&max_y<=600)
 		{
 			this.y=y;
 			return true;
