@@ -5,8 +5,8 @@ public class Point
 
 	private int x;
 	private int y;
-	final int max_x=800;
-	final int max_y=600;
+	private static final int max_x=800;
+	private static final int max_y=600;
 	
 	public Point()
 	{
