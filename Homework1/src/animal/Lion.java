@@ -1,5 +1,6 @@
 package animal;
 import diet.Carnivore;
+import food.EFoodType;
 import food.IEdible;
 import mobility.Point;
 import diet.IDiet;
@@ -27,6 +28,10 @@ public class Lion extends Animal
 		
 	}
 	
+	public EFoodType getFoodtype()
+	{
+		
+	}
 
 	
 	

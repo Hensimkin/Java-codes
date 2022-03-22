@@ -2,5 +2,5 @@ package food;
 
 public interface IEdible 
 {
-	EFoodType getFoodtype();
+	public EFoodType getFoodtype();
 }

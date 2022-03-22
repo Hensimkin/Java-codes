@@ -7,13 +7,13 @@ import food.IEdible;
 public class Carnivore implements IDiet
 {
 
-	public boolean  canEat(EFoodType food)
+	public boolean canEat(EFoodType food)
 	{
 		if (food.equals(EFoodType.MEAT))
 		{
 			return true;
 		}
-		return true;
+		return false;
 	}
 	
 	public double eat(Animal animal, IEdible food)
