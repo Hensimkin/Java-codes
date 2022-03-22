@@ -6,6 +6,11 @@ public abstract class Mobile implements Ilocatable  {
 	private Point location;
 	private double totalDistance;
 	
+	public static void main(String[] args)
+	{
+		System.out.print("hi");
+	}
+	
 	public Mobile(Point p)
 	{
 		this.location=new Point(p.getX(),p.getY());
@@ -24,5 +29,16 @@ public abstract class Mobile implements Ilocatable  {
 	//public static double move(Point p)
 	{
 		//return p.totalDistance;
+	}
+	
+	public Point getLocation()
+	{
+		Point a=new Point(this.location.getX(),this.location.getY());
+		return a;
+	}
+	
+	public boolean setLocation(Point p)
+	{
+		return this.location.setX(p.getX())&&this.location.setY(p.getY());
 	}
 }
