@@ -1,6 +1,8 @@
 package diet;
 
+import animal.Animal;
 import food.EFoodType;
+import food.IEdible;
 
 public class Carnivore implements IDiet
 {
@@ -13,4 +15,10 @@ public class Carnivore implements IDiet
 		}
 		return true;
 	}
+	
+	public double eat(Animal animal, IEdible food)
+	{
+		return 1;
+	}
+
 }
