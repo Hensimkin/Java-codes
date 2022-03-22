@@ -7,7 +7,7 @@ public class Carnivore implements IDiet
 
 	public boolean  canEat(EFoodType food)
 	{
-		if (food==EFoodType.MEAT)
+		if (food.equals(EFoodType.MEAT))
 		{
 			return true;
 		}

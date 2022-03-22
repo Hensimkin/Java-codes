@@ -1,7 +1,6 @@
 package food;
 
-public interface IEdible {
-	
+public interface IEdible 
+{
 	EFoodType getFoodtype();
-
 }

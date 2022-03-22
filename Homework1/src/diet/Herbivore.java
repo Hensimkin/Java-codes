@@ -4,9 +4,10 @@ public class Herbivore implements IDiet
 {
 	public boolean  canEat(EFoodType food)
 	{
-		if (food==EFoodType.VEGETABLE)
+		if (food.equals(EFoodType.VEGETABLE))
 		{
 			return true;
 		}
-		return true;
+		return false;
+	}
 }

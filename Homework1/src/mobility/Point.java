@@ -20,6 +20,13 @@ public class Point
 		setY(y);
 	}
 	
+	public Point(Point point)
+	{
+		Point newpoint=new Point();
+		newpoint.x=point.getX();
+		newpoint.y=point.getY();
+	}
+	
 	public boolean setX(int x)
 	{
 		if (x>0&&max_x<800)

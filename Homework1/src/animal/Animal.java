@@ -1,16 +1,27 @@
 package animal;
 import diet.IDiet;
-public abstract class Animal 
+import mobility.Point;
+import food.IEdible;
+public abstract class Animal  extends Point implements  IEdible
 {
 	private String name;
-	private double  weight;
+	private double  weight=0;
 	private IDiet diet;
 	
-	public Animal();
+	public Animal(String name,Point point)
+	{
+		super(point);
+		this.name=name;
+	}
 	
-	public void makeSound();
+	public abstract void makeSound();
 	
-	boolean eat(IEdible food)
+	public abstract boolean eat(IEdible food);
+	
+	public void setWeight(double weight)
+	{
+		this.weight=weight;
+	}
 
 	
 
