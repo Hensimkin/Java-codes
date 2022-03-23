@@ -28,15 +28,17 @@ public class Lion extends Animal
 	
 	public boolean eat(IEdible food)
 	{
-		if(super.getDiet().canEat(food.getFoodtype())==true)
+		double weight1=super.getDiet().eat(this, food);
+		if (weight1>0)
 		{
-			double weight1=super.getDiet().eat(this, food);
 			super.setWeight(weight1);
 			super.makeSound();
 			return true;
 		}
 		else
+		{
 			return false;
+		}
 	}
 	
 	public void roar()//yes

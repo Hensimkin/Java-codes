@@ -23,6 +23,10 @@ public class Carnivore implements IDiet
 			double tempweight=animal.getWeight()+animal.getWeight()*0.1;
 			return tempweight;
 		}
+		else
+		{
+			return 0;
+		}
 	}
 
 }
