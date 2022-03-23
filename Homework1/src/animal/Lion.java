@@ -9,46 +9,53 @@ import utilities.MessageUtility;
 public class Lion extends Animal
 {
 	private final static Point start=new Point(20,0);
-	private final static IDiet Meat=new Carnivore();
+	private final static IDiet diet=new Carnivore();
 	private int scarCount=0;
 	
-	public Lion(String name)
+	public Lion(String name)//yes
 	{
 		super(name,start);
 		super.setWeight(408.2);
-		
+		super.setDiet(diet);
 	}
 	
-	public Lion(String name,Point point)
+	public Lion(String name,Point point)//yes
 	{
 		super(name,point);
 		super.setWeight(408.2);
-		
+		super.setDiet(diet);
 	}
 	
 	public boolean eat(IEdible food)
 	{
-		return true;
+		if(super.getDiet().canEat(food.getFoodtype())==true)
+		{
+			double weight=super.getDiet().eat(this, food);
+			super.setWeight(weight);
+			return true;
+		}
+		else
+			return false;
 	}
 	
-	public void makeSound()
+	public void makeSound()//no 
 	{
 		roar();
 	}
 	
-	public void roar()
+	public void roar()//yes
 	{
 		MessageUtility.logSound(this.getName(), "Roars, then stretches and shakes its mane");
 	}
 	
-	public EFoodType getFoodtype()
+	public EFoodType getFoodtype()//yes
 	{
-		return EFoodType.NOTFOOD;
+		return EFoodType.MEAT;
 	}
-	
-	public String toString()
+
+	public String toString() //no
 	{
-		return this.getName()
+		return null;
 	}
 	
 
