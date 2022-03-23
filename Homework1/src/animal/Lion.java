@@ -46,6 +46,11 @@ public class Lion extends Animal
 		return EFoodType.NOTFOOD;
 	}
 	
+	public String toString()
+	{
+		return this.getName()
+	}
+	
 
 	
 	

@@ -5,7 +5,7 @@ import food.IEdible;
 public abstract class Animal  extends Mobile implements  IEdible
 {
 	private String name;
-	private double  weight=0;
+	private double weight;
 	private IDiet diet;
 	
 	public Animal(String name,Point point)
