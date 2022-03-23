@@ -18,7 +18,8 @@ public class Carnivore implements IDiet
 	
 	public double eat(Animal animal, IEdible food)
 	{
-		return 1;
+		double tempweight=animal.getWeight()+animal.getWeight()*0.1;
+		return tempweight;
 	}
 
 }

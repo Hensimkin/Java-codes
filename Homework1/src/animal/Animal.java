@@ -36,7 +36,21 @@ public abstract class Animal  extends Mobile implements  IEdible
 		return this.name;
 	}
 	
+	
+	
 	public abstract String toString();
+	
+	
+	
+	public IDiet getDiet()
+	{
+		return this.diet;
+	}
+	
+	public double getWeight()
+	{
+		return this.weight;
+	}
 
 	
 
