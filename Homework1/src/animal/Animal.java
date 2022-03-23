@@ -14,7 +14,10 @@ public abstract class Animal  extends Mobile implements  IEdible
 		this.name=name;
 	}
 	
-	public abstract void makeSound();
+	public void makeSound()
+	{
+		
+	}
 	
 	public abstract boolean eat(IEdible food);
 	
