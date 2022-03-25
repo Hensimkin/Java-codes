@@ -10,6 +10,5 @@ public class Main
 		IEdible a4=new Lion("simba2");
 		Lion a1=new Lion("simba");
 		a1.eat(a4);
-
 	}
 }
