@@ -18,7 +18,8 @@ public abstract class Animal  extends Mobile implements  IEdible
 	{
 		if (this.getClass()==Lion.class)
 		{
-			
+			Lion a=(Lion)this;
+			a.roar();
 		}
 	}
 	

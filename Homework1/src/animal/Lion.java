@@ -12,14 +12,14 @@ public class Lion extends Animal
 	private final static IDiet diet=new Carnivore();
 	private int scarCount=0;
 	
-	public Lion(String name)//yes
+	public Lion(String name)
 	{
 		super(name,start);
 		super.setWeight(408.2);
 		super.setDiet(diet);
 	}
 	
-	public Lion(String name,Point point)//yes
+	public Lion(String name,Point point)
 	{
 		super(name,point);
 		super.setWeight(408.2);
@@ -33,6 +33,7 @@ public class Lion extends Animal
 		{
 			super.setWeight(weight1);
 			super.makeSound();
+			
 			return true;
 		}
 		else
@@ -46,9 +47,9 @@ public class Lion extends Animal
 		MessageUtility.logSound(this.getName(), "Roars, then stretches and shakes its mane");
 	}
 	
-	public EFoodType getFoodtype()//yes
+	public EFoodType getFoodtype()//return the animals type of food
 	{
-		return EFoodType.MEAT;
+		return EFoodType.NOTFOOD;
 	}
 
 	public String toString() //no
