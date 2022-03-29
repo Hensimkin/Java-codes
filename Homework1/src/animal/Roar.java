@@ -10,19 +10,7 @@ public  abstract class Roar extends Animal
 		super(name, point);
 	}
 
-	public void roar()
-	{
-		if (this.getClass()==Lion.class)
-		{
-			MessageUtility.logSound(super.getName(),"Roars, then stretches and shakes its mane");
-		}
-		/*
-		if (this.getClass()==Bear.class)
-		{
-			MessageUtility.logSound(super.getName(),"Stands on its hind legs, roars and scratches its belly");
-		}
-		*/
-	}
+	public abstract void roar();
 	
 	public void makeSound()
 	{

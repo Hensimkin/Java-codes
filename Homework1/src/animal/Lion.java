@@ -72,7 +72,12 @@ public class Lion extends Roar
 		return this.scarCount;
 	}
 	
+    
 	
+	public void roar()
+	{
+		MessageUtility.logSound(super.getName(),"Roars, then stretches and shakes its mane");
+	}
 	
 
 	

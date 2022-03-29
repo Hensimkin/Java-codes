@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args)
 	{
 		Animal h1=new Lion("Simba");
-        System.out.println(((Lion) h1).getScars());
+        Animal h2=new Bear("Baloo");
 	}
 
 }
