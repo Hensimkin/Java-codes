@@ -37,17 +37,18 @@ public class Bear extends Roar
 	}
 
 
-	public EFoodType getFoodtype() {
+	
+	public EFoodType getFoodtype() 
+	{
 		return EFoodType.MEAT;
-		
 	}
 
 
+	
 	public boolean eat(IEdible food) {
 		double weight1=super.getDiet().eat(this, food);
 		if (weight1>0)
 		{
-			Random temp=new Random();
 			super.setWeight(weight1);
 			super.makeSound();
 			return true;
@@ -59,10 +60,12 @@ public class Bear extends Roar
 	}
 
 	
-	public String toString() {
-		// TODO Auto-generated method stub
+	
+	public String toString() 
+	{
 		return null;
 	}
+	
 	
 	
 	public void roar()
@@ -71,10 +74,12 @@ public class Bear extends Roar
 	}
 	
 	
+	
 	public String getFur()
 	{
 		return this.fur;
 	}
+	
 	
 	
 	public boolean setFurColor(String color)
