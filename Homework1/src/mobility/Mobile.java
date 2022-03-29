@@ -26,10 +26,8 @@ public abstract class Mobile implements Ilocatable  {
 	}
 	
 	
-	/*public static double move(Point p)
-	{
-		return p.totalDistance;
-	}*/
+	public abstract double move(Point p);
+
 	
 	public Point getLocation()
 	{

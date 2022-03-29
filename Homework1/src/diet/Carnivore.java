@@ -16,6 +16,7 @@ public class Carnivore implements IDiet
 		return false;
 	}
 	
+	
 	public double eat(Animal animal, IEdible food)
 	{
 		if(canEat(food.getFoodtype())==true)
@@ -28,5 +29,11 @@ public class Carnivore implements IDiet
 			return 0;
 		}
 	}
+	
+	
+	 public String toString()
+	    {
+	        return "[Carnivore]";
+	    }
 
 }
