@@ -1,10 +1,10 @@
 package plants;
-
+import mobility.*;
 import java.util.Random;
 
 import food.EFoodType;
 import food.IEdible;
-import mobility.ILocatable;
+import mobility.*;
 import mobility.Point;
 import utilities.MessageUtility;
 
@@ -12,7 +12,7 @@ import utilities.MessageUtility;
  * @author baroh
  *
  */
-public abstract class Plant implements IEdible, ILocatable {
+public abstract class Plant implements IEdible, Ilocatable {
 	/**
 	 * 
 	 */
@@ -98,7 +98,7 @@ public abstract class Plant implements IEdible, ILocatable {
 	 * 
 	 * @see mobility.ILocatable#setLocation(mobility.Point)
 	 */
-	@Override
+
 	public boolean setLocation(Point newLocation) {
 		boolean isSuccess = Point.cheackBounderies(newLocation);
 		if (isSuccess) {

@@ -4,7 +4,8 @@ import utilities.MessageUtility;
 
 
 public class Lettuce extends Plant {
-	public Lettuce() {
+	public Lettuce() 
+	{
 		MessageUtility.logConstractor("Lettuce", "Lettuce");
 	}
 }

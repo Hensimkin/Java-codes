@@ -63,4 +63,20 @@ public class Point
 	{
 		return this.y;
 	}
+	
+	public static boolean cheackBounderies(Point p)
+	{
+		if ((p.getX()>=0 && p.getX()<=800)&&(p.getY()>=0 && p.getY()<=600))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	
 }
+
+
