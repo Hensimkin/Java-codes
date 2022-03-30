@@ -81,77 +81,88 @@ public class ZooActions {
 		{
 			int option=0;
 			int option2=0;
-			System.out.println("Please select an animal");
+			System.out.println("enter name\n");
+			name=scan.next();
+			while(name.matches(".*\\d.*"))
+			{
+				name=scan.next();
+			}
+			System.out.println("Please select an animal\n");
 			System.out.println("1. Lion \n2. Bear\n3. Elephant\n4. Giraffe\n5. Turtle\n");
 			while(option <1||option >5)
 			{
-				System.out.println("enter the option");
+				System.out.println("enter the option\n");
 				option=scan.nextInt();
 			}
-			if (option==1)
-			{
-				System.out.println("enter name");
-				name=scan.next();
-				array[i]=lionbuild(name);	
-			}
-			
-		
+			array[i]=Animalbuild(name,option);
 		}
+		System.out.println(((Lion)array[0]).getScars());
 	}
 	
 	
 	
-	public static Lion lionbuild(String name)
+	public static Animal Animalbuild(String name,int option)
 	{
 		Scanner scan= new Scanner(System.in);
 		int option2=0;
-		System.out.println("Do you want to choose start point ?\n1. Yes\n2. No");
+		System.out.println("Do you want to choose start point ?\n1. Yes\n2. No\n");
 		while(option2 <1||option2 >2)
 		{
 			System.out.println("enter the option");
 			option2=scan.nextInt();
 		}
-		if (option2==1)
+		if (option2==2)
 		{
-			return new Lion(name);
+			
+			if (option==1)
+			{
+				return new Lion(name);
+			}
+			else if(option==2)
+			{
+				return new Bear(name);
+			}
+			else if (option==3)
+			{
+				return new Elephant(name);
+			}
+			else if (option==4)
+			{
+				return new Giraffe(name);
+			}
+			else
+			{
+				return new Turtle(name);
+			}
+			
 		}
 		else
 		{
-			Point p=pointBuild();
-			return new Lion(name,p);
-		}		
+			if (option==1)
+			{
+				Point p=pointBuild();
+				return new Lion(name,p);
+			}
+			else if(option==2)
+			{
+				Point p=pointBuild();
+				return new Bear(name,p);
+			}
+			else if (option==3)
+			{
+				Point p=pointBuild();
+				return new Elephant(name,p);
+			}
+			else if (option==4)
+			{
+				Point p=pointBuild();
+				return new Giraffe(name,p);
+			}
+			else
+			{
+				Point p=pointBuild();
+				return new Turtle(name,p);
+			}
+		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
 }		
-
-
-
-
-
-	
-
