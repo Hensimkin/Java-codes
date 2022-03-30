@@ -22,7 +22,7 @@ public abstract class Mobile implements Ilocatable  {
 	
 	public double calcDistance(Point p)
 	{
-		return Math.sqrt(Math.pow(this.location.getX()-p.getX(),2)+Math.pow(this.location.getX()-p.getX(),2));
+		return Math.sqrt(Math.pow(this.location.getX()-p.getX(),2)+Math.pow(this.location.getY()-p.getY(),2));
 	}
 	
 	
