@@ -45,7 +45,8 @@ public class Bear extends Roar
 
 
 	
-	public boolean eat(IEdible food) {
+	public boolean eat(IEdible food) 
+	{
 		double weight1=super.getDiet().eat(this, food);
 		if (weight1>0)
 		{

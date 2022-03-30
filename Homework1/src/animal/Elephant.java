@@ -10,9 +10,9 @@ import food.EFoodType;
 import food.IEdible;
 public class Elephant extends Chew
 {
-	private final static Point start=new Point(100,5);
+	private final static Point start=new Point(50,90);
 	private final static IDiet diet=new Herbivore();
-	double trunkLengh;
+	private double trunkLengh=1;
 	
 	
 	public Elephant(String name)
@@ -20,6 +20,7 @@ public class Elephant extends Chew
 		super(name,start);
 		MessageUtility.logConstractor("Elephant", name);
 		super.setWeight(500);
+		setTrunkLengh(trunkLengh);
 		super.setDiet(diet);
 	}
 	
@@ -29,24 +30,26 @@ public class Elephant extends Chew
 		super(name,point);
 		MessageUtility.logConstractor("Elephant", name);
 		super.setWeight(500);
+		setTrunkLengh(trunkLengh);
 		super.setDiet(diet);
 	}
 
 
 	
-	public EFoodType getFoodtype() {
+	public EFoodType getFoodtype() 
+	{
 		return EFoodType.MEAT;
 	}
 
 
-	@Override
-	public void chew() {
+	
+	public void chew() 
+	{
 		MessageUtility.logSound(super.getName(),"Trumpets with joy while flapping its ears, then chews");
-		
 	}
 
 
-	@Override
+
 	public boolean eat(IEdible food) {
 		double weight1=super.getDiet().eat(this, food);
 		if (weight1>0)
@@ -62,9 +65,24 @@ public class Elephant extends Chew
 	}
 
 
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
+	public String toString()
+	{
 		return null;
+	}
+	
+	
+	public boolean setTrunkLengh(double lengh)
+	{
+		if (lengh>=0.5 && lengh <=3)
+		{
+			this.trunkLengh=lengh;
+			MessageUtility.logSetter(this.getName(), "setTrunkLengh", lengh, true);
+			return true;
+		}
+		else
+		{
+			MessageUtility.logSetter(this.getName(), "setTrunkLengh", lengh, false);
+			return false;
+		}
 	}
 }
