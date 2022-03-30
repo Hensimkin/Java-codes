@@ -1,10 +1,13 @@
 package main;
+import mobility.*;
+
 import animal.*;
 import plants.*;
 public class Main {
 
 	public static void main(String[] args)
 	{
+		Point z=new Point(40,30);
 		Plant h8=new Cabbage();
 		Animal h1=new Lion("Simba");
         Animal h2=new Bear("Baloo");
@@ -12,7 +15,7 @@ public class Main {
         Animal h4=new Elephant("Dumbo");
         Animal h5=new Giraffe("Melman");
         Animal h6=new Turtle("Refael");
-        h6.eat(h8);
+        System.out.println(h6.move(z));
         /*
         h1.eat(h2);
         h2.eat(h3);
