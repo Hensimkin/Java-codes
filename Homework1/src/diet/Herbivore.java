@@ -25,4 +25,9 @@ public class Herbivore implements IDiet
 			return 0;
 		}
 	}
+	
+	public String toString()
+    {
+        return "[Herbivore]";
+    }
 }

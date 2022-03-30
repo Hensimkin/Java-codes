@@ -4,8 +4,8 @@ import food.EFoodType;
 import food.IEdible;
 public class Omnivore implements IDiet
 {
-	Carnivore c=new Carnivore();
-	Herbivore h=new Herbivore();
+	private static Carnivore c=new Carnivore();
+	private static Herbivore h=new Herbivore();
 	
 	
 	public boolean canEat(EFoodType food)
