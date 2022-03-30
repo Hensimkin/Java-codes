@@ -1,8 +1,9 @@
 package main;
 import mobility.*;
-
 import animal.*;
 import plants.*;
+import zoo.*;
+
 public class Main {
 
 	public static void main(String[] args)
@@ -16,6 +17,8 @@ public class Main {
         Animal h5=new Giraffe("Melman");
         Animal h6=new Turtle("Refael");
         System.out.println(h6.move(z));
+        ZooActions za1=new ZooActions();
+        za1.eat(h1,h3);
         /*
         h1.eat(h2);
         h2.eat(h3);

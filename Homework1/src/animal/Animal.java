@@ -1,9 +1,9 @@
 package animal;
 import diet.IDiet;
 import mobility.*;
-import utilities.MessageUtility;
-import food.EFoodType;
-import food.IEdible;
+import utilities.*;
+import food.*;
+
 public abstract class Animal  extends Mobile implements  IEdible
 {
 	private String name;
