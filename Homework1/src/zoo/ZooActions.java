@@ -41,6 +41,39 @@ public class ZooActions {
 		return false;
 	}
 	
+	public Animal info()
+	{
+		int option2=0;
+		System.out.println("Do you want to choose start point ?\n1. Yes\n2. No");
+		while(option2 <1||option2 >2)
+		{
+			System.out.println("enter the option");
+			option2=scan.nextInt();
+		}
+		if (option2==1)
+		{
+			array[i]=new Lion(name);
+		}
+		if (option2==2)
+		{
+			int x,y;
+			Point p = null;
+			boolean check=false;
+			while(check==false)
+			{
+				System.out.println("please enter an cordinates 0<=x<=800, 0<=y<=600");
+				x=scan.nextInt();
+				y=scan.nextInt();
+				p=new Point(x,y);
+				check =Point.cheackBounderies(p);
+			}
+			array[i]=new Lion(name,p);
+		 }
+	
+	}
+
+
+	
 	
 	public static void main(String[] args)
 	{
@@ -71,34 +104,11 @@ public class ZooActions {
 			{
 				System.out.println("enter name");
 				name=scan.next();
-				System.out.println("Do you want to choose start point ?\n1. Yes\n2. No");
-				while(option2 <1||option2 >2)
-				{
-					System.out.println("enter the option");
-					option2=scan.nextInt();
-				}
-				if (option2==1)
-				{
-					array[i]=new Lion(name);
-				}
-				if (option2==2)
-				{
-					int x,y;
-					Point p = null;
-					boolean check=false;
-					while(check==false)
-					{
-						System.out.println("please enter an cordinates 0<=x<=800, 0<=y<=600");
-						x=scan.nextInt();
-						y=scan.nextInt();
-						p=new Point(x,y);
-						check =Point.cheackBounderies(p);
-					}
-					array[i]=new Lion(name,p);
-				 }
+				
 					
-				}
 			}
+			
+		
 		}
 		
 	}
