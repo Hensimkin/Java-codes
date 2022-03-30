@@ -2,6 +2,9 @@ package zoo;
 
 import mobility.*;
 import food.*;
+
+import java.util.Scanner;
+
 import animal.*;
 
 public class ZooActions {
@@ -36,6 +39,29 @@ public class ZooActions {
 			}
 		}
 		return false;
+	}
+	
+	
+	public static void main(String[] args)
+	{
+		int size;
+		Animal array[];
+		Scanner scan= new Scanner(System.in);
+		System.out.println("Enter a size for the animal array");
+		size=scan.nextInt();
+		while(size<3)
+		{
+			System.out.println("Wrong size array must be at least 3");
+			size=scan.nextInt();
+		}
+		array=new Animal[size];
+		for(int i=0;i<size;i++)
+		{
+			int option;
+			System.out.println("Please select an animal");
+			System.out.println("1. Lion, \n,"1. Lion",\n,);
+		}
+		
 	}
 
 	
