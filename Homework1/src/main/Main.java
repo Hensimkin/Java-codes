@@ -18,7 +18,8 @@ public class Main {
         Animal h6=new Turtle("Refael");
         System.out.println(h6.move(z));
         ZooActions za1=new ZooActions();
-        za1.eat(h1,h3);
+        System.out.println(za1.eat(h2,h4));
+
         /*
         h1.eat(h2);
         h2.eat(h3);
