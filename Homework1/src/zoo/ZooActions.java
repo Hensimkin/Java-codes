@@ -45,6 +45,7 @@ public class ZooActions {
 	public static void main(String[] args)
 	{
 		int size;
+		String name;
 		Animal array[];
 		Scanner scan= new Scanner(System.in);
 		System.out.println("Enter a size for the animal array");
@@ -57,12 +58,50 @@ public class ZooActions {
 		array=new Animal[size];
 		for(int i=0;i<size;i++)
 		{
-			int option;
+			int option=0;
+			int option2=0;
 			System.out.println("Please select an animal");
-			System.out.println("1. Lion, \n,"1. Lion",\n,);
+			System.out.println("1. Lion \n2. Bear\n3. Elephant\n4. Giraffe\n5. Turtle\n");
+			while(option <1||option >5)
+			{
+				System.out.println("enter the option");
+				option=scan.nextInt();
+			}
+			if (option==1)
+			{
+				System.out.println("enter name");
+				name=scan.next();
+				System.out.println("Do you want to choose start point ?\n1. Yes\n2. No");
+				while(option2 <1||option2 >2)
+				{
+					System.out.println("enter the option");
+					option2=scan.nextInt();
+				}
+				if (option2==1)
+				{
+					array[i]=new Lion(name);
+				}
+				if (option2==2)
+				{
+					int x,y;
+					Point p = null;
+					boolean check=false;
+					while(check==false)
+					{
+						System.out.println("please enter an cordinates 0<=x<=800, 0<=y<=600");
+						x=scan.nextInt();
+						y=scan.nextInt();
+						p=new Point(x,y);
+						check =Point.cheackBounderies(p);
+					}
+					array[i]=new Lion(name,p);
+				 }
+					
+				}
+			}
 		}
 		
 	}
 
 	
-}
+
