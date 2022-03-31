@@ -1,13 +1,11 @@
 package animal;
-import java.util.Random;
 
 import diet.Herbivore;
 import diet.IDiet;
-import diet.Omnivore;
 import mobility.*;
 import utilities.MessageUtility;
-import food.EFoodType;
-import food.IEdible;
+import food.*;
+
 public class Elephant extends Chew
 {
 	private final static Point start=new Point(50,90);

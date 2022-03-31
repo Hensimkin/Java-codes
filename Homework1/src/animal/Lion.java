@@ -2,10 +2,11 @@ package animal;
 import diet.Carnivore;
 import food.EFoodType;
 import food.IEdible;
-import mobility.Point;
+import mobility.*;
 import diet.IDiet;
 import utilities.MessageUtility;
 import java.util.*;
+
 public class Lion extends Roar
 {
 	private final static Point start=new Point(20,0);

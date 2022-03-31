@@ -1,7 +1,6 @@
 package diet;
 
-import food.EFoodType;
-import food.IEdible;
+import food.*;
 import animal.Animal;
 
 public interface IDiet 

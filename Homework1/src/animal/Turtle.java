@@ -2,10 +2,10 @@ package animal;
 
 import diet.Herbivore;
 import diet.IDiet;
-import food.EFoodType;
-import food.IEdible;
-import mobility.Point;
-import utilities.MessageUtility;
+import food.*;
+import mobility.*;
+import utilities.*;
+
 
 public class Turtle extends Chew
 {

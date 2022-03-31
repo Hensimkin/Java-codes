@@ -80,7 +80,6 @@ public class ZooActions {
 		for(int i=0;i<size;i++)
 		{
 			int option=0;
-			int option2=0;
 			System.out.println("enter name\n");
 			name=scan.next();
 			while(name.matches(".*\\d.*"))

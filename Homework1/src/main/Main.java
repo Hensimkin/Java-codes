@@ -1,17 +1,20 @@
+/**
 package main;
 import mobility.*;
 import animal.*;
 import plants.*;
 import zoo.*;
 
-public class Main {
+
+public class Main
+ {
 
 	public static void main(String[] args)
 	{
-		Point z=new Point(40,30);
-		Plant h8=new Cabbage();
-        ZooActions.main(args);
-        Lion p1=new Lion("simba");
+		//Point z=new Point(40,30);
+		//Plant h8=new Cabbage();
+        //ZooActions.main(args);
+        //Lion p1=new Lion("simba");
         
         /*
         String nam="abd";
@@ -21,6 +24,8 @@ public class Main {
         System.out.println(((Lion)h1).getScars());
         */
         
-	}
+	//}
 
-}
+//}
+
+//*/

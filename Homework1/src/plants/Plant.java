@@ -1,11 +1,7 @@
 package plants;
 import mobility.*;
 import java.util.Random;
-
-import food.EFoodType;
-import food.IEdible;
-import mobility.*;
-import mobility.Point;
+import food.*;
 import utilities.MessageUtility;
 
 /**
