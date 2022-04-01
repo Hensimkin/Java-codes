@@ -1,8 +1,8 @@
 package zoo;
-
 import mobility.*;
 import food.*;
-
+import java.util.InputMismatchException;
+import java.util.Random;
 import java.util.Scanner;
 
 import animal.*;
@@ -14,14 +14,14 @@ public class ZooActions {
 		Scanner scan= new Scanner(System.in);
 		int x,y;
 		Point p = null;
-		boolean check=false;
-		while(check==false)
+		x=scan.nextInt();
+		y=scan.nextInt();
+		p=new Point(x,y);
+		while(Point.cheackBounderies(p)==false)
 		{
-			System.out.println("please enter an cordinates 0<=x<=800, 0<=y<=600");
 			x=scan.nextInt();
 			y=scan.nextInt();
 			p=new Point(x,y);
-			check =Point.cheackBounderies(p);
 		}
 		return p;
 	}
@@ -65,16 +65,32 @@ public class ZooActions {
 	
 	public static void main(String[] args)
 	{
-		int size;
+		int op1,op2;
+		Random check=new Random();
+		Random check2=new Random();
+		int size=0;
+		int size2=0;
+		int temp;
 		String name;
 		Animal array[];
 		Scanner scan= new Scanner(System.in);
-		System.out.println("Enter a size for the animal array");
-		size=scan.nextInt();
-		while(size<3)
+		boolean done=false;
+		while(!done)
 		{
-			System.out.println("Wrong size array must be at least 3");
-			size=scan.nextInt();
+			try
+			{
+				while(size<3)
+				{
+					System.out.println("enter number above 3");
+					size=scan.nextInt();
+				}
+				done=true;
+			}
+			catch(InputMismatchException e)
+			{
+				String str=scan.nextLine();
+				System.out.println("ivaild");
+			}
 		}
 		array=new Animal[size];
 		for(int i=0;i<size;i++)
@@ -89,14 +105,62 @@ public class ZooActions {
 			}
 			System.out.println("Please select an animal\n");
 			System.out.println("1. Lion \n2. Bear\n3. Elephant\n4. Giraffe\n5. Turtle\n");
-			while(option <1||option >5)
+			done=false;
+			while(!done)
 			{
-				System.out.println("enter the option\n");
-				option=scan.nextInt();
+				try
+				{
+					while(option <1||option >5)
+					{
+						System.out.println("enter the option\n");
+						option=scan.nextInt();
+					}
+					done=true;
+				}
+				catch(InputMismatchException e)
+				{
+					String str=scan.nextLine();
+					System.out.println("ivaild choice");
+				}
 			}
 			array[i]=Animalbuild(name,option);
 		}
-		System.out.println(((Lion)array[0]).getScars());
+		
+		
+		System.out.println("******Movment simulation******");
+		
+		for(int i=0;i<size;i++)
+		{
+			System.out.println("enter the point");
+			if(move(array[i],pointBuild())==true)
+			{
+				System.out.println("The animal has moved:  ");
+				System.out.print(array[i].getTotaldistance());
+				System.out.println("\n");
+			}
+		
+		}
+		if(size%2==0)
+			temp=size/2;
+		else
+		{
+			temp=(size-1)/2;
+		}
+		System.out.println("******Eating simulation******");
+		for(int i=0;i<temp;i++)
+		{
+			op1=check.nextInt(size);
+			op2=check2.nextInt(size);
+			boolean t=eat(array[op1],array[op2]);
+			if(t==true)
+			{
+				System.out.println("The animal ate ");
+			}
+			else
+			{
+				System.out.println("The animal didnt ate ");
+			}
+		}
 	}
 	
 	
@@ -106,10 +170,23 @@ public class ZooActions {
 		Scanner scan= new Scanner(System.in);
 		int option2=0;
 		System.out.println("Do you want to choose start point ?\n1. Yes\n2. No\n");
-		while(option2 <1||option2 >2)
+		boolean done=false;
+		while(!done)
 		{
-			System.out.println("enter the option");
-			option2=scan.nextInt();
+			try
+			{
+				while(option2 <1||option2 >2)
+				{
+					System.out.println("enter the option");
+					option2=scan.nextInt();
+				}
+				done=true;
+			}
+			catch(InputMismatchException e)
+			{
+				String str=scan.nextLine();
+				System.out.println("ivaild choice");
+			}
 		}
 		if (option2==2)
 		{

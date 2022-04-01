@@ -16,8 +16,8 @@ public class Point
 	
 	public Point(int x,int y)
 	{
-		setX(x);
-		setY(y);
+		this.x=x;
+		this.y=y;
 	}
 	
 	public Point(Point p)
@@ -28,21 +28,21 @@ public class Point
 	
 	public boolean setX(int x)
 	{
-		if (x>=0&&max_x<=800)
+		if (x>=0&&x<=max_x)
 		{
 			this.x=x;
 			return true;
 		}
 		else
 		{
-			System.out.print("Please enter valid X");
+			System.out.print("Please enter valid x");
 			return false;
-		}	
+		}
 	}
 	
 	public boolean setY(int y)
 	{
-		if (y>=0&&max_y<=600)
+		if (y>=0&&y<=max_y)
 		{
 			this.y=y;
 			return true;
@@ -66,7 +66,7 @@ public class Point
 	
 	public static boolean cheackBounderies(Point p)
 	{
-		if ((p.getX()>=0 && p.getX()<=800)&&(p.getY()>=0 && p.getY()<=600))
+		if ((p.getX()>=0 && p.getX()<=max_x)&&(p.getY()>=0 && p.getY()<=max_y))
 		{
 			return true;
 		}

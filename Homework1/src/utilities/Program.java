@@ -1,5 +1,5 @@
 package utilities;
-
+/*
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,11 +14,14 @@ import animals.Turtle;
 import food.IEdible;
 import mobility.Point;
 import plants.Cabbage;
-
+*/
 /**
  * @author baroh
  *
  */
+
+
+/*
 public class Program {
 
 	private static List<Animal> animals;
@@ -123,3 +126,4 @@ public class Program {
 	}
 
 }
+*/

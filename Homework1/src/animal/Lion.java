@@ -36,11 +36,13 @@ public class Lion extends Roar
 	
 	public boolean eat(IEdible food)
 	{
+		int z;
 		double weight1=super.getDiet().eat(this, food);
 		if (weight1>0)
 		{
 			Random temp=new Random();
-			this.scarCount=this.scarCount+temp.nextInt(0,1);
+			z=temp.nextInt(2);
+			this.scarCount=this.scarCount+z;
 			super.setWeight(weight1);
 			super.makeSound();
 			return true;
