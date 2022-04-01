@@ -12,16 +12,46 @@ public class ZooActions {
 	public static Point pointBuild()
 	{
 		Scanner scan= new Scanner(System.in);
-		int x,y;
+		int x=0,y=0;
 		Point p = null;
-		x=scan.nextInt();
-		y=scan.nextInt();
-		p=new Point(x,y);
+		boolean done=false;
+		while(!done)
+		{
+			try
+			{
+				System.out.println("Enter x");
+				x=scan.nextInt();
+				System.out.println("Enter y");
+				y=scan.nextInt();
+				p=new Point(x,y);
+				done=true;
+			}
+			catch(InputMismatchException e)
+			{
+				String str=scan.nextLine();
+				System.out.println("ivaild numbers");
+			}
+		}
+		done=false;
 		while(Point.cheackBounderies(p)==false)
 		{
-			x=scan.nextInt();
-			y=scan.nextInt();
-			p=new Point(x,y);
+			while(!done)
+			{
+				try
+				{
+					System.out.println("Enter x");
+					x=scan.nextInt();
+					System.out.println("Enter y");
+					y=scan.nextInt();
+					p=new Point(x,y);
+					done=true;
+				}
+				catch(InputMismatchException e)
+				{
+					String str=scan.nextLine();
+					System.out.println("ivaild numbers");
+				}
+			}
 		}
 		return p;
 	}
