@@ -1,7 +1,6 @@
 package animal;
 
 import mobility.Point;
-import utilities.MessageUtility;
 
 public  abstract class Roar extends Animal
 {

@@ -2,9 +2,8 @@ package animal;
 
 import diet.Herbivore;
 import diet.IDiet;
-import food.EFoodType;
-import food.IEdible;
-import mobility.Point;
+import food.*;
+import mobility.*;
 import utilities.MessageUtility;
 
 public class Giraffe extends Chew

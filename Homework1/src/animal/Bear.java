@@ -1,13 +1,9 @@
 package animal;
 
-import java.util.Random;
-
-import diet.Carnivore;
 import diet.IDiet;
 import diet.Omnivore;
-import food.EFoodType;
-import food.IEdible;
-import mobility.Point;
+import food.*;
+import mobility.*;
 import utilities.MessageUtility;
 
 public class Bear extends Roar
