@@ -64,7 +64,8 @@ public class Bear extends Roar
 	
 	public String toString() 
 	{
-		return null;
+		return "[!]" + super.getName() + "\ttotal distance:" + String.format("%.2f", super.getTotaldistance())+ "\tweight:" + this.getWeight();
+
 	}
 	
 	
@@ -78,6 +79,7 @@ public class Bear extends Roar
 	
 	public String getFur()
 	{
+		MessageUtility.logGetter(this.getName(), "getFur", fur);
 		return this.fur;
 	}
 	

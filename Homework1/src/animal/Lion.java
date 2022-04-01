@@ -64,13 +64,14 @@ public class Lion extends Roar
 	
 	public String toString() 
 	{
-		return null;
+		return "[!]" + super.getName() + "\ttotal distance:" + String.format("%.2f", super.getTotaldistance())+ "\tweight:" + this.getWeight();
 	}
 	
 	
 	
 	public int getScars()
 	{
+		MessageUtility.logGetter(this.getName(), "getScars", scarCount);
 		return this.scarCount;
 	}
 	

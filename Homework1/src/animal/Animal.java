@@ -70,6 +70,7 @@ public abstract class Animal  extends Mobile implements  IEdible
 	
 	public double getWeight()
 	{
+		MessageUtility.logGetter(this.name, "getWeight", this.weight);
 		return this.weight;
 	}
 	
@@ -87,10 +88,14 @@ public abstract class Animal  extends Mobile implements  IEdible
 	
 	public double move(Point p)
 	{
+		double tempWight;
 		if(super.calcDistance(p)>0)
 		{
-			this.weight=this.weight-(0.00025*this.weight*super.calcDistance(p));
+			getWeight();
+			tempWight=this.weight-(0.00025*this.weight*super.calcDistance(p));
+			setWeight(tempWight);
 			super.addTotalDistance(calcDistance(p));
+			
 			return super.getTotaldistance();
 		}
 		else

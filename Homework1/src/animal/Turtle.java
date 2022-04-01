@@ -67,7 +67,8 @@ public class Turtle extends Chew
 
 	public String toString()
 	{
-		return null;
+		return "[!]" + super.getName() + "\ttotal distance:" + String.format("%.2f", super.getTotaldistance())+ "\tweight:" + this.getWeight();
+
 	}
 	
 	
