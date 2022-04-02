@@ -6,12 +6,21 @@ import food.*;
 import mobility.*;
 import utilities.MessageUtility;
 
+/**
+ * a bear type of animal that extend the roar class
+ * @author Adir
+ *
+ */
 public class Bear extends Roar
 {
 	private final static Point start=new Point(100,5);
 	private final static IDiet diet=new Omnivore();
 	String fur;
 	
+	/**
+	 * a contractor the give the animal a name
+	 * @param name
+	 */
 	public Bear(String name)
 	{
 		super(name,start);
@@ -22,7 +31,11 @@ public class Bear extends Roar
 	}
 	
 	
-	
+	/**
+	 * a contractor the give the animal a name and start point
+	 * @param name
+	 * @param point
+	 */
 	public Bear(String name,Point point)
 	{
 		super(name,point);
@@ -40,7 +53,13 @@ public class Bear extends Roar
 	}
 
 
-	
+	/**
+	 * check if the bear can eat that food 
+	 * @param food
+	 * 			food type 
+	 * @return
+	 * 		true if he can eat this food,or false if he dont
+	 */
 	public boolean eat(IEdible food) 
 	{
 		double weight1=super.getDiet().eat(this, food);
@@ -80,7 +99,13 @@ public class Bear extends Roar
 	}
 	
 	
-	
+	/**
+	 * check the color of the fur and print the details
+	 * @param color
+	 * 			the color of the fur
+	 * @return	
+	 * 		true if the fur is the color white black and white else return false
+	 */
 	public boolean setFurColor(String color)
 	{
 		if (color=="GREY"||color=="BLACK"||color=="WHITE")

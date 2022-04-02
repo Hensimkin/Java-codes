@@ -7,6 +7,11 @@ import diet.IDiet;
 import utilities.MessageUtility;
 import java.util.*;
 
+/**
+ * a lion type of animal that extend the roar class
+ * @author Adir
+ *
+ */
 public class Lion extends Roar
 {
 	private final static Point start=new Point(20,0);
@@ -14,7 +19,10 @@ public class Lion extends Roar
 	private int scarCount=0;
 	
 	
-	
+	/**
+	 * a contractor the give the animal a name
+	 * @param name
+	 */
 	public Lion(String name)
 	{
 		super(name,start);
@@ -24,7 +32,11 @@ public class Lion extends Roar
 	}
 	
 	
-	
+	/**
+	 * a contractor the give the animal a name and start point
+	 * @param name
+	 * @param point
+	 */
 	public Lion(String name,Point point)
 	{
 		super(name,point);
@@ -34,7 +46,13 @@ public class Lion extends Roar
 	}
 	
 	
-	
+	/**
+	 * check if the bear can eat that food 
+	 * @param food
+	 * 			food type 
+	 * @return
+	 * 		true if he can eat this food,or false if he dont
+	 */
 	public boolean eat(IEdible food)
 	{
 		int z;

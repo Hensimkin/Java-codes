@@ -2,6 +2,11 @@ package animal;
 
 import mobility.Point;
 
+/**
+ * a animal that roar after she eat 
+ * @author Adir
+ *
+ */
 public  abstract class Roar extends Animal
 {
 	public Roar(String name, Point point) 

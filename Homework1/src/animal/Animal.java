@@ -4,6 +4,11 @@ import food.*;
 import mobility.*;
 import utilities.*;
 
+/**
+ * class that represent an animal
+ * @author Adir
+ *
+ */
 public abstract class Animal  extends Mobile implements  IEdible
 {
 	private String name;
@@ -12,7 +17,13 @@ public abstract class Animal  extends Mobile implements  IEdible
 	
 	
 	
-	
+	/**
+	 * constractor that get name and point
+	 * @param name
+	 * 			the name of the animal
+	 * @param point
+	 * 			starting point of the animal
+	 */
 	public Animal(String name,Point point)
 	{
 		super(point);
@@ -30,7 +41,11 @@ public abstract class Animal  extends Mobile implements  IEdible
 	public abstract void makeSound();
 	
 	
-	
+	/**
+	 *	set the weight of the animal 
+	 * @param weight
+	 * @return
+	 */
 	public boolean setWeight(double weight)
 	{
 		this.weight=weight;
@@ -40,7 +55,11 @@ public abstract class Animal  extends Mobile implements  IEdible
 	
 	
 	
-	
+	/**
+	 * set the diet of the animal
+	 * @param diet
+	 * @return
+	 */
 	public boolean setDiet(IDiet diet)
 	{
 		this.diet=diet;
@@ -49,7 +68,10 @@ public abstract class Animal  extends Mobile implements  IEdible
 	}
 	
 	
-	
+	/**
+	 * return the name of the animal
+	 * @return
+	 */
 	public String getName()
 	{
 		return this.name;
@@ -85,18 +107,25 @@ public abstract class Animal  extends Mobile implements  IEdible
 
 
 	
-	
+	/**
+	 *	function that decrease the weight of the animal depend the total the distance he walk
+	 *	and update is new location 
+	 * @param p	
+	 * 		the point the animal walk
+	 * @return
+	 * 		the total distance
+	 */
 	public double move(Point p)
 	{
 		double tempWight;
 		if(super.calcDistance(p)>0)
 		{
-			getWeight();
 			tempWight=this.weight-(0.00025*this.weight*super.calcDistance(p));
 			setWeight(tempWight);
 			super.addTotalDistance(calcDistance(p));
-			
+			super.setLocation(p);
 			return super.getTotaldistance();
+			
 		}
 		else
 		{

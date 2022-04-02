@@ -6,7 +6,11 @@ import food.*;
 import mobility.*;
 import utilities.*;
 
-
+/**
+ * a turtle type of animal that extend the chew class
+ * @author Adir
+ *
+ */
 public class Turtle extends Chew
 {
 	private final static Point start=new Point(50,0);
@@ -14,7 +18,10 @@ public class Turtle extends Chew
 	private int  age=1;
 	
 	
-
+	/**
+	 * a contractor the give the animal a name
+	 * @param name
+	 */
 	public Turtle(String name)
 	{
 		super(name,start);
@@ -24,7 +31,11 @@ public class Turtle extends Chew
 		super.setDiet(diet);
 	}
 	
-	
+	/**
+	 * a contractor the give the animal a name and start point
+	 * @param name
+	 * @param point
+	 */
 	public Turtle(String name,Point point)
 	{
 		super(name,point);
@@ -49,7 +60,13 @@ public class Turtle extends Chew
 	}
 
 
-
+	/**
+	 * check if the bear can eat that food 
+	 * @param food
+	 * 			food type 
+	 * @return
+	 * 		true if he can eat this food,or false if he dont
+	 */
 	public boolean eat(IEdible food) {
 		double weight1=super.getDiet().eat(this, food);
 		if (weight1>0)
@@ -71,7 +88,13 @@ public class Turtle extends Chew
 
 	}
 	
-	
+	/**
+	 * check if the age of the turtle is legal and update the age,also print the details.
+	 * @param age
+	 * 			the age of the turtle
+	 * @return
+	 * 		true if the age is legal else return false
+	 */
 	public boolean setAge(int age)
 	{
 		if (age>=0 && age <=500)
@@ -85,5 +108,11 @@ public class Turtle extends Chew
 			MessageUtility.logSetter(this.getName(), "setAge", age, false);
 			return false;
 		}
+	}
+	
+	public double getAge()
+	{
+		MessageUtility.logGetter(this.getName(), "getAge", age);
+		return this.age;
 	}
 }

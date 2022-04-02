@@ -5,14 +5,21 @@ import diet.IDiet;
 import mobility.*;
 import utilities.MessageUtility;
 import food.*;
-
+/**
+  * a elephant type of animal that extend the chew class 
+ * @author Adir
+ *
+ */
 public class Elephant extends Chew
 {
 	private final static Point start=new Point(50,90);
 	private final static IDiet diet=new Herbivore();
 	private double trunkLengh=1;
-	
-	
+
+	/**
+	 * a contractor the give the animal a name
+	 * @param name
+	 */
 	public Elephant(String name)
 	{
 		super(name,start);
@@ -22,7 +29,11 @@ public class Elephant extends Chew
 		super.setDiet(diet);
 	}
 	
-	
+	/**
+	 * a contractor the give the animal a name and start point
+	 * @param name
+	 * @param point
+	 */
 	public Elephant(String name,Point point)
 	{
 		super(name,point);
@@ -47,7 +58,13 @@ public class Elephant extends Chew
 	}
 
 
-
+	/**
+	 * check if the elephant can eat that food 
+	 * @param food
+	 * 			food type 
+	 * @return
+	 * 		true if he can eat this food,or false if he dont
+	 */
 	public boolean eat(IEdible food) {
 		double weight1=super.getDiet().eat(this, food);
 		if (weight1>0)
@@ -68,7 +85,13 @@ public class Elephant extends Chew
 		return "[!]" + super.getName() + "\ttotal distance:" + String.format("%.2f", super.getTotaldistance())+ "\tweight:" + this.getWeight();
 	}
 	
-	
+	/**
+	 * check if the length of the trunk is legal and update the length,also print the details.
+	 * @param lengh
+	 * 			the length of the trunk
+	 * @return
+	 * 		true if the length is legal else return false
+	 */
 	public boolean setTrunkLengh(double lengh)
 	{
 		if (lengh>=0.5 && lengh <=3)
@@ -84,6 +107,12 @@ public class Elephant extends Chew
 		}
 	}
 	
+	public double getTrunkLengh()
+	{
+		MessageUtility.logGetter(this.getName(), "getTrunkLengh", trunkLengh);
+		return this.trunkLengh;
+	}
 	
 	
+
 }

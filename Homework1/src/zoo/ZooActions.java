@@ -7,8 +7,18 @@ import java.util.Scanner;
 
 import animal.*;
 
+/**
+ * class that make a zoo-group of animal and make on them different actions
+ * @author Adir
+ *
+ */
 public class ZooActions {
 	
+	/**
+	 * make a new point that represent the location of an animal
+	 * @return
+	 * 		the new location- a point
+	 */
 	public static Point pointBuild()
 	{
 		Scanner scan= new Scanner(System.in);
@@ -59,10 +69,18 @@ public class ZooActions {
 	
 	
 	
-	
+	/**
+	 * the function first check which class the animal belong then check if she can eat this type of food,if she can eat this the function return true else return false
+	 * @param animal
+	 * 			the type of animal we check
+	 * @param food
+	 * 			the type of food we check
+	 * @return
+	 * 		true if the animal can eat else return false
+	 */
 	public static boolean eat(Object animal, IEdible food)
 	{
-		if (animal instanceof Lion ||animal instanceof Lion ||animal instanceof Bear||animal instanceof Elephant ||animal instanceof Giraffe ||animal instanceof Turtle )
+		if (animal instanceof Lion ||animal instanceof Bear||animal instanceof Elephant ||animal instanceof Giraffe ||animal instanceof Turtle )
 		{
 			if (((Animal) animal).eat(food)==true)
 				return true;
@@ -71,9 +89,20 @@ public class ZooActions {
 		return false;
 	}
 	
+	/**
+	 * the function first check which class the animal belong then check if the given point is legal
+	 * if both condition are true we calc the distance between the new location to the old and update the total distance.
+	 * after all the conditions executed the function return true
+	 * @param animal
+	 * 			type of animal
+	 * @param point
+	 * 			a location
+	 * @return
+	 * 		true if all the conditions executed else return false
+	 */
 	public static boolean move(Object animal, Point point)
 	{
-		if (animal.getClass().equals(Lion.class)||animal.getClass().equals(Bear.class)||animal.getClass().equals(Elephant.class)||animal.getClass().equals(Giraffe.class)||animal.getClass().equals(Turtle.class))
+		if (animal instanceof Lion ||animal instanceof Bear||animal instanceof Elephant ||animal instanceof Giraffe ||animal instanceof Turtle )
 		{
 			if (Point.cheackBounderies(point) ==true)
 			{
@@ -92,14 +121,18 @@ public class ZooActions {
 		return false;
 	}
 	
-	
+	/**
+	 * the main function of zoo , initialize a least 3 animal at the zoo depend the input by the user
+	 * when insert an animal the user need to give name to the animal then choose if to give her starting point
+	 * there is exception check of the input of the user all over the function to prevent error.
+	 * @param args
+	 */
 	public static void main(String[] args)
 	{
 		int op1,op2;
 		Random check=new Random();
 		Random check2=new Random();
 		int size=0;
-		int size2=0;
 		int temp;
 		String name;
 		Animal array[];
@@ -130,6 +163,7 @@ public class ZooActions {
 			name=scan.next();
 			while(name.matches(".*\\d.*"))
 			{
+				System.out.println("enter name\n");
 				name=scan.next();
 			}
 			System.out.println("Please select an animal\n");
@@ -193,7 +227,15 @@ public class ZooActions {
 	}
 	
 	
-	
+	/**
+	 * this function create new animal also can make start point to the animal if the user want.
+	 * @param name
+	 * 			the name of the animal
+	 * @param option
+	 * 			the input by the user this check which animal to create.
+	 * @return
+	 * 		the new animal
+	 */
 	public static Animal Animalbuild(String name,int option)
 	{
 		Scanner scan= new Scanner(System.in);
