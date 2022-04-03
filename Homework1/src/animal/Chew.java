@@ -5,7 +5,7 @@ import mobility.Point;
 /**
  * a animal that chew after she eat 
  * @author Adir
- *
+ *@author Hen
  */
 public abstract class Chew extends Animal
 {

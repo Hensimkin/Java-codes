@@ -9,7 +9,7 @@ import utilities.MessageUtility;
 /**
  * a bear type of animal that extend the roar class
  * @author Adir
- *
+ *@author Hen
  */
 public class Bear extends Roar
 {

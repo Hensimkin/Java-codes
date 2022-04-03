@@ -6,8 +6,8 @@ import utilities.*;
 
 /**
  * class that represent an animal
- * @author Adir
- *
+ * @author Hen
+ *@author Adir
  */
 public abstract class Animal  extends Mobile implements  IEdible
 {

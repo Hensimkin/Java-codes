@@ -6,7 +6,7 @@ import animal.Animal;
 /**
  * interface that represent the diet of the animal
  * @author Adir
- *
+ *@author Hen
  */
 public interface IDiet 
 {

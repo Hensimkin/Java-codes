@@ -10,7 +10,7 @@ import java.util.*;
 /**
  * a lion type of animal that extend the roar class
  * @author Adir
- *
+ *@author Hen
  */
 public class Lion extends Roar
 {

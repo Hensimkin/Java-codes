@@ -8,7 +8,7 @@ import food.*;
 /**
   * a elephant type of animal that extend the chew class 
  * @author Adir
- *
+ *@author Hen
  */
 public class Elephant extends Chew
 {

@@ -10,7 +10,7 @@ import animal.*;
 /**
  * class that make a zoo-group of animal and make on them different actions
  * @author Adir
- *
+ *@author Hen
  */
 public class ZooActions {
 	

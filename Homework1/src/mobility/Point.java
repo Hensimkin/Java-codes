@@ -3,7 +3,7 @@ package mobility;
 /**
  * class that represent a point in the location
  * @author Adir
- *
+ *@author Hen
  */
 public class Point 
 {

@@ -5,7 +5,7 @@ import mobility.Point;
 /**
  * a animal that roar after she eat 
  * @author Adir
- *
+ *@author Hen
  */
 public  abstract class Roar extends Animal
 {

@@ -9,7 +9,7 @@ import utilities.MessageUtility;
 /**
  * a giraffe type of animal that extend the chew class
  * @author Adir
- *
+ *@author Hen
  */
 public class Giraffe extends Chew
 {
