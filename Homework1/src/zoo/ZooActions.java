@@ -1,5 +1,6 @@
 package zoo;
 import mobility.*;
+import utilities.MessageUtility;
 import food.*;
 import java.util.InputMismatchException;
 import java.util.Random;
@@ -197,9 +198,13 @@ public class ZooActions {
 			System.out.println("enter the point");
 			if(move(array[i],pointBuild())==true)
 			{
-				System.out.println("The animal has moved:  ");
+				MessageUtility.logBooleanFunction(array[i].getName(), "move()", array[i].getLocation(), true);
 				System.out.print(array[i].getTotaldistance());
 				System.out.println("\n");
+			}
+			else
+			{
+				MessageUtility.logBooleanFunction(array[i].getName(), "move()", array[i].getLocation(), false);
 			}
 		
 		}
