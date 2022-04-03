@@ -222,11 +222,11 @@ public class ZooActions {
 			boolean t=eat(array[op1],array[op2]);
 			if(t==true)
 			{
-				System.out.println("The animal ate ");
+				MessageUtility.logBooleanFunction(array[op1].getName(), "eat()", array[op1].getFoodtype(), true);
 			}
 			else
 			{
-				System.out.println("The animal didnt ate ");
+				MessageUtility.logBooleanFunction(array[op1].getName(), "eat()", array[op1].getFoodtype(), false);
 			}
 		}
 	}
