@@ -25,7 +25,7 @@ public class ZooFrame extends JFrame {
 		file.setSize(100,100);//butoom size
 		background.setSize(100,100);
 		help.setSize(100,100);
-		file.setBounds(0,0,100,100);
+		file.setBounds(0,0,100,100);// buttom bounds
 		background.setBounds(100,0,100,100);
 		help.setBounds(200,0,100,100);
 		file.setVisible(true);//buttom visible
@@ -33,6 +33,8 @@ public class ZooFrame extends JFrame {
 		help.setVisible(true);
 
 		frame.add(file);
+		frame.add(background);
+		frame.add(help);
 		//frame.getContentPane().add(label);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
