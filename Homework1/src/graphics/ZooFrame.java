@@ -14,8 +14,26 @@ public class ZooFrame extends JFrame {
 
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Zoo");
-		final JLabel label = new JLabel("Hello World");
-		frame.getContentPane().add(label);
+		//JLabel label = new JLabel("Hello World");
+		JButton file=new JButton();
+		JButton background=new JButton();
+		JButton help=new JButton();
+		frame.setSize(800,600);//frame size
+		file.setText("File");//set buttom name
+		file.setText("background");
+		file.setText("help");
+		file.setSize(100,100);//butoom size
+		background.setSize(100,100);
+		help.setSize(100,100);
+		file.setBounds(0,0,100,100);
+		background.setBounds(100,0,100,100);
+		help.setBounds(200,0,100,100);
+		file.setVisible(true);//buttom visible
+		background.setVisible(true);
+		help.setVisible(true);
+
+		frame.add(file);
+		//frame.getContentPane().add(label);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setVisible(true);
