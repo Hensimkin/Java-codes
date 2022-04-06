@@ -84,8 +84,7 @@ public class Giraffe extends Chew
 
 	public String toString()
 	{
-		return "[!]" + super.getName() + "\ttotal distance:" + String.format("%.2f", super.getTotaldistance())+ "\tweight:" + this.getWeight();
-
+		return "[Giraffe:]" + super.getName();
 	}
 	
 	/**

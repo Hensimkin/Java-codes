@@ -83,7 +83,7 @@ public class Lion extends Roar
 	
 	public String toString() 
 	{
-		return "[!]" + super.getName() + "\ttotal distance:" + String.format("%.2f", super.getTotaldistance())+ "\tweight:" + this.getWeight();
+		return "[Lion:]" + super.getName();
 	}
 	
 	

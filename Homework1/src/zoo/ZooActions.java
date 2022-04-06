@@ -81,12 +81,38 @@ public class ZooActions {
 	 */
 	public static boolean eat(Object animal, IEdible food)
 	{
+		/*
 		if (animal instanceof Lion ||animal instanceof Bear||animal instanceof Elephant ||animal instanceof Giraffe ||animal instanceof Turtle )
 		{
 			if (((Animal) animal).eat(food)==true)
 				return true;
 		}
-		
+		*/
+		if(animal instanceof Lion)
+		{
+			if (((Lion) animal).eat(food)==true)
+				return true;
+		}
+		if(animal instanceof Bear)
+		{
+			if (((Bear) animal).eat(food)==true)
+				return true;
+		}
+		if(animal instanceof Elephant)
+		{
+			if (((Elephant) animal).eat(food)==true)
+				return true;
+		}
+		if(animal instanceof Giraffe)
+		{
+			if (((Giraffe) animal).eat(food)==true)
+				return true;
+		}
+		if(animal instanceof Turtle)
+		{
+			if (((Turtle) animal).eat(food)==true)
+				return true;
+		}
 		return false;
 	}
 	
@@ -103,12 +129,94 @@ public class ZooActions {
 	 */
 	public static boolean move(Object animal, Point point)
 	{
+		/*
 		if (animal instanceof Lion ||animal instanceof Bear||animal instanceof Elephant ||animal instanceof Giraffe ||animal instanceof Turtle )
 		{
 			if (Point.cheackBounderies(point) ==true)
 			{
 				double temp=((Animal)animal).getTotaldistance();
 				double temp2=((Animal)animal).move(point);
+				if(temp!= temp2)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+		*/
+		if (animal instanceof Lion)
+		{
+			if (Point.cheackBounderies(point) ==true)
+			{
+				double temp=((Lion)animal).getTotaldistance();
+				double temp2=((Lion)animal).move(point);
+				if(temp!= temp2)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+		if (animal instanceof Bear)
+		{
+			if (Point.cheackBounderies(point) ==true)
+			{
+				double temp=((Bear)animal).getTotaldistance();
+				double temp2=((Bear)animal).move(point);
+				if(temp!= temp2)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+		if (animal instanceof Elephant)
+		{
+			if (Point.cheackBounderies(point) ==true)
+			{
+				double temp=((Elephant)animal).getTotaldistance();
+				double temp2=((Elephant)animal).move(point);
+				if(temp!= temp2)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+		if (animal instanceof Giraffe)
+		{
+			if (Point.cheackBounderies(point) ==true)
+			{
+				double temp=((Giraffe)animal).getTotaldistance();
+				double temp2=((Giraffe)animal).move(point);
+				if(temp!= temp2)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+		if (animal instanceof Turtle)
+		{
+			if (Point.cheackBounderies(point) ==true)
+			{
+				double temp=((Turtle)animal).getTotaldistance();
+				double temp2=((Turtle)animal).move(point);
 				if(temp!= temp2)
 				{
 					return true;
@@ -130,7 +238,7 @@ public class ZooActions {
 	 */
 	public static void main(String[] args)
 	{
-		int op1,op2;
+		int op1=0,op2=0;
 		Random check=new Random();
 		Random check2=new Random();
 		int size=0;
@@ -217,15 +325,20 @@ public class ZooActions {
 		System.out.println("******Eating simulation******");
 		for(int i=0;i<temp;i++)
 		{
-			op1=check.nextInt(size);
-			op2=check2.nextInt(size);
+			while(op1==op2)
+			{
+				op1=check.nextInt(size);
+				op2=check2.nextInt(size);
+			}
 			boolean t=eat(array[op1],array[op2]);
 			if(t==true)
 			{
+				System.out.println(array[op1]+" eats "+array[op2]);
 				MessageUtility.logBooleanFunction(array[op1].getName(), "eat()", array[op1].getFoodtype(), true);
 			}
 			else
 			{
+				System.out.println(array[op1]+" eats "+array[op2]);
 				MessageUtility.logBooleanFunction(array[op1].getName(), "eat()", array[op1].getFoodtype(), false);
 			}
 		}

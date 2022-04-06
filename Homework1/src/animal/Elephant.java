@@ -82,7 +82,7 @@ public class Elephant extends Chew
 
 	public String toString()
 	{
-		return "[!]" + super.getName() + "\ttotal distance:" + String.format("%.2f", super.getTotaldistance())+ "\tweight:" + this.getWeight();
+		return "[Elephant:]" + super.getName();
 	}
 	
 	/**
