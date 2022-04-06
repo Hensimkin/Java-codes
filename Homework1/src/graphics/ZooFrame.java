@@ -20,8 +20,8 @@ public class ZooFrame extends JFrame {
 		JButton help=new JButton();
 		frame.setSize(800,600);//frame size
 		file.setText("File");//set buttom name
-		file.setText("background");
-		file.setText("help");
+		background.setText("background");
+		help.setText("help");
 		file.setSize(100,100);//butoom size
 		background.setSize(100,100);
 		help.setSize(100,100);
