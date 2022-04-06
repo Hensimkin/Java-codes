@@ -2,8 +2,8 @@ package mobility;
 
 /**
  * class that represent a point in the location
- * @author Adir
- *@author Hen
+ * @author Hen simkin 
+ * @author Adir melker
  */
 public class Point 
 {

@@ -5,8 +5,8 @@ import food.IEdible;
 
 /**
  * a class the that represent a Herbivore and impements IDiet
- * @author Adir
- *@author Hen
+ * @author Hen simkin 
+ * @author Adir melker
  */
 public class Omnivore implements IDiet
 {

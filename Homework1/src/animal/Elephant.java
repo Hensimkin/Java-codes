@@ -7,8 +7,8 @@ import utilities.MessageUtility;
 import food.*;
 /**
   * a elephant type of animal that extend the chew class 
- * @author Adir
- *@author Hen
+ * @author Hen simkin 
+ * @author Adir melker
  */
 public class Elephant extends Chew
 {

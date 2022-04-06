@@ -2,8 +2,8 @@ package food;
 
 /**
  * interface that represent all food type
- * @author Adir
- *@author Hen
+* @author Hen simkin 
+ * @author Adir melker
  */
 public interface IEdible 
 {

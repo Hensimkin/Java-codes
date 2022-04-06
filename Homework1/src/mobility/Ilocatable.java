@@ -2,8 +2,8 @@ package mobility;
 
 /**
  * interface that point the location of an animal
- * @author Adir
- *@author Hen
+ * @author Hen simkin 
+ * @author Adir melker
  */
 public interface Ilocatable {
 

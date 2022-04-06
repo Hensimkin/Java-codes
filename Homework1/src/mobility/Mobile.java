@@ -3,8 +3,8 @@ import java.lang.Math;
 
 /**
  * mobile is an abstract class that implements Ilocatable that calc all the distance and location of animal
- * @author Adir
- *@author Hen
+ * @author Hen simkin 
+ * @author Adir melker
  */
 public abstract class Mobile implements Ilocatable  {
 

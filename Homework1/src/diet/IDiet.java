@@ -5,8 +5,8 @@ import animal.Animal;
 
 /**
  * interface that represent the diet of the animal
- * @author Adir
- *@author Hen
+ * @author Hen simkin 
+ * @author Adir melker
  */
 public interface IDiet 
 {

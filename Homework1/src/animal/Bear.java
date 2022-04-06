@@ -8,8 +8,8 @@ import utilities.MessageUtility;
 
 /**
  * a bear type of animal that extend the roar class
- * @author Adir
- *@author Hen
+ * * @author Hen simkin 
+ * @author Adir melker
  */
 public class Bear extends Roar
 {
