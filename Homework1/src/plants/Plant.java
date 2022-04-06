@@ -3,12 +3,13 @@ import mobility.*;
 import java.util.Random;
 import food.*;
 import utilities.MessageUtility;
+import graphics.*;
 
 /**
  * @author baroh
  *
  */
-public abstract class Plant implements IEdible, Ilocatable {
+public abstract class Plant implements IEdible, Ilocatable,IDrawable {
 	/**
 	 * 
 	 */

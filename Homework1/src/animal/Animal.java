@@ -3,17 +3,30 @@ import diet.*;
 import food.*;
 import mobility.*;
 import utilities.*;
+import graphics.*;
 
 /**
  * class that represent an animal
  * @author Hen simkin 
  * @author Adir melker
  */
-public abstract class Animal  extends Mobile implements  IEdible
+public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAnimalBehavior
 {
 	private String name;
 	private double weight;
 	private IDiet diet;
+	private final int EAT_DISTANCE = 5;
+	private int size;
+	//private Color col;
+	private int horSpeed;
+	private int verSpeed;
+	private boolean coordChanged;
+	private Thread thread;
+	private int x_dir;
+	private int y_dir;
+	private int eatCount;
+	//private ZooPanel pan;
+	//private BufferedImage img1, img2;
 	
 	
 	

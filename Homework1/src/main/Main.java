@@ -1,4 +1,4 @@
-
+/*
 package main;
 import mobility.*;
 import java.util.InputMismatchException;
@@ -18,3 +18,4 @@ public class Main
 	}
 
 }
+*/
