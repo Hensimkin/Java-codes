@@ -83,6 +83,7 @@ public class ZooFrame extends JFrame
 				ImageIcon aboutIcon=new ImageIcon("about.png");
 				labelWork2.setIcon(aboutIcon);
 				JButton btOk=new JButton("OK");
+				btOk.setFocusable(false);
 				btOk.setBounds(150,150,70,30);
 				labelWork2.add(btOk);	
 				btOk.addActionListener(new ActionListener() {
