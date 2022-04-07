@@ -13,17 +13,19 @@ import utilities.*;
 import zoo.*;
 
 
-public class ZooFrame extends JFrame {
-
-	public static void main(String[] args) {
+public class ZooFrame extends JFrame 
+{
+	
+	public static void main(String[] args) 
+	{
 		JFrame frame = new JFrame("Zoo");
+		frame.setVisible(true);
+		frame.setSize(800,600);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
 		JLabel label=new JLabel();
 		frame.add(label);
-		frame.setSize(1000,800);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//frame.pack();
-		frame.setLocationRelativeTo(null);
-		frame.setVisible(true);
 		JMenuBar menuBar=new JMenuBar();
 		frame.setJMenuBar(menuBar);
 		JMenu file=new JMenu("File");
@@ -69,20 +71,32 @@ public class ZooFrame extends JFrame {
 		});
 		JMenuItem help2=new JMenuItem("Help");
 		help.add(help2);
-		help2.addActionListener(new ActionListener() {
-
-			@Override
+		help2.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e) {
 				JFrame message = new JFrame("Message");
-				final JLabel homework = new JLabel("Home Work 2\n GUI");
-				message.getContentPane().add(homework);
-				message.setSize(300,300);
+				JButton button=new JButton();
+				button.setBounds(470, 500, 70, 30);
+				button.setText("OK");
+				button.setFocusable(false);
+				message.setSize(600,600);
 				message.setVisible(true);
+				ImageIcon pic=new ImageIcon("work.png");
+				final JLabel homework = new JLabel("Home Work 2\n GUI");
+				homework.setHorizontalAlignment(JLabel.RIGHT);
+				homework.setHorizontalAlignment(JLabel.CENTER);
+				message.getContentPane().add(homework);
+				homework.setIcon(pic);
+				homework.add(button);	
+				button.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e)
+					{  
+						message.close();
+				    }
+				});
 				
+	            
 			}
-			
-			
-
 		});
 
 	}
