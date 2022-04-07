@@ -17,7 +17,6 @@ public class ZooFrame extends JFrame {
 
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Zoo");
-<<<<<<< HEAD
 		//JLabel label = new JLabel("Hello World");
 		JButton file=new JButton();
 		JButton background=new JButton();
@@ -40,19 +39,10 @@ public class ZooFrame extends JFrame {
 		frame.add(background);
 		//frame.add(help);
 		//frame.getContentPane().add(label);
-=======
 		frame.setSize(800,600);
->>>>>>> branch 'master' of https://github.com/Hensimkin/Java-codes.git
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//frame.pack();
-<<<<<<< HEAD
-=======
 		frame.setLocationRelativeTo(null);
->>>>>>> branch 'master' of https://github.com/Hensimkin/Java-codes.git
-		frame.setVisible(true);
-<<<<<<< HEAD
-		
-=======
 		JMenuBar menuBar=new JMenuBar();
 		frame.setJMenuBar(menuBar);
 		JMenu file=new JMenu("File");
@@ -88,7 +78,6 @@ public class ZooFrame extends JFrame {
 			
 
 		});
->>>>>>> branch 'master' of https://github.com/Hensimkin/Java-codes.git
 
 	}
 }
