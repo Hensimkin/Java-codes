@@ -1,5 +1,8 @@
 package graphics;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 import animal.*;
 import diet.*;
@@ -19,14 +22,14 @@ public class ZooFrame extends JFrame {
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
-		JMenuBar mb=new JMenuBar();
-		frame.setJMenuBar(mb);
+		JMenuBar menuBar=new JMenuBar();
+		frame.setJMenuBar(menuBar);
 		JMenu file=new JMenu("File");
-		mb.add(file);
+		menuBar.add(file);
 		JMenu background=new JMenu("Background");
-		mb.add(background);
+		menuBar.add(background);
 		JMenu help=new JMenu("Help");
-		mb.add(help);
+		menuBar.add(help);
 		JMenuItem exit=new JMenuItem("Exit");
 		file.add(exit);
 		JMenuItem image=new JMenuItem("Image");
@@ -37,7 +40,22 @@ public class ZooFrame extends JFrame {
 		background.add(none);
 		JMenuItem help2=new JMenuItem("Help");
 		help.add(help2);
+		help2.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JFrame message = new JFrame("Message");
+				final JLabel homework = new JLabel("Home Work 2\n GUI");
+				message.getContentPane().add(homework);
+				message.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				message.pack();
+				message.setVisible(true);
+				
+			}
+			
+			
+
+		});
 
 	}
-
 }
