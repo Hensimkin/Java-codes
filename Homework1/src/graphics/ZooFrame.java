@@ -13,7 +13,7 @@ import utilities.*;
 import zoo.*;
 
 
-public class ZooFrame extends JFrame 
+public class ZooFrame extends JFrame
 {
 	
 	public static void main(String[] args) 
@@ -73,7 +73,8 @@ public class ZooFrame extends JFrame
 		help.add(help2);
 		help2.addActionListener(new ActionListener() 
 		{
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e)
+			{
 				JFrame message = new JFrame("Message");
 				JButton button=new JButton();
 				button.setBounds(470, 500, 70, 30);
@@ -91,7 +92,8 @@ public class ZooFrame extends JFrame
 				button.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e)
 					{  
-						message.close();
+						message.setVisible(false);
+						message.dispose();
 				    }
 				});
 				
