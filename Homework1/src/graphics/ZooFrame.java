@@ -19,7 +19,7 @@ public class ZooFrame extends JFrame {
 		JFrame frame = new JFrame("Zoo");
 		frame.setSize(800,600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.pack();
+		//frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 		JMenuBar menuBar=new JMenuBar();
@@ -45,10 +45,11 @@ public class ZooFrame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				JFrame message = new JFrame("Message");
-				final JLabel homework = new JLabel("Home Work 2\n GUI");
+				final JLabel homework = new JLabel("Home Work 2");
+				final JLabel gu=new JLabel("GUI");
 				message.getContentPane().add(homework);
-				message.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				message.pack();
+				message.getContentPane().add(gu);
+				message.setSize(300,300);
 				message.setVisible(true);
 				
 			}
