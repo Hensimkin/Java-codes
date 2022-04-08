@@ -44,12 +44,14 @@ public class ZooFrame extends JFrame
 				System.exit(0);
 			}
 		});	
-		JMenuItem image=new JMenuItem("400.jpeg");
+		JMenuItem image=new JMenuItem("Image");
 		background.add(image);
-		exit.addActionListener(new ActionListener() {
+		image.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				
+				label.setBackground(Color.white);
+				ImageIcon zoo = new ImageIcon("400.jpeg"); 
+				label.setIcon(zoo);
 			}
 		});
 		JMenuItem green=new JMenuItem("Green");
@@ -57,6 +59,7 @@ public class ZooFrame extends JFrame
 		green.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				label.setIcon(null);
 				label.setBackground(Color.GREEN);
 				label.setOpaque(true);
 			}
@@ -67,6 +70,7 @@ public class ZooFrame extends JFrame
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
+				label.setIcon(null);
 				label.setBackground(Color.white);
 				label.setOpaque(false);
 			}
