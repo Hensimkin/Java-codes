@@ -56,6 +56,7 @@ public class ZooFrame extends JFrame
 		green.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				label.setIcon(null);
 				label.setBackground(Color.GREEN);
 				label.setOpaque(true);
 			}
@@ -66,6 +67,7 @@ public class ZooFrame extends JFrame
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
+				label.setIcon(null);
 				label.setBackground(Color.white);
 				label.setOpaque(false);
 			}
