@@ -24,7 +24,7 @@ public class ZooFrame extends JFrame
 		frame.setSize(800,600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
-		frame.add(m);
+		frame.add(m,BorderLayout.SOUTH);
 		JLabel label=new JLabel();
 		frame.add(label);
 		//frame.pack();

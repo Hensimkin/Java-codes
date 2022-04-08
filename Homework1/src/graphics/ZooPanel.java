@@ -31,8 +31,6 @@ public class ZooPanel extends JPanel implements Runnable
 		info.setFocusable(false);
 		exit.setFocusable(false);
 		this.setBackground(Color.blue);
-		//this.setLayout(null);
-		this.setBounds(10, 490, 770, 37);
 		this.add(addanimal);
 		this.add(moveanimal);
 		this.add(clear);
