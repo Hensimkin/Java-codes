@@ -18,9 +18,11 @@ public class ZooFrame extends JFrame
 	
 	public static void main(String[] args) 
 	{
+		ZooPanel m=new ZooPanel();
 		JFrame frame = new JFrame("Zoo");
 		frame.setVisible(true);
 		frame.setSize(800,600);
+		frame.add(m);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		JLabel label=new JLabel();
@@ -94,7 +96,7 @@ public class ZooFrame extends JFrame
 				});
 			}
 		});
-
 	}
+	
 }
 
