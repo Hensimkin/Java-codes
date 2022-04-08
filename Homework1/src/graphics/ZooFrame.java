@@ -47,6 +47,7 @@ public class ZooFrame extends JFrame
 		image.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
+				label.setBackground(Color.white);
 				ImageIcon zoo = new ImageIcon("400.jpeg"); 
 				label.setIcon(zoo);
 			}
