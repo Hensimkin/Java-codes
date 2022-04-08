@@ -42,14 +42,14 @@ public class ZooFrame extends JFrame
 				System.exit(0);
 			}
 		});	
-		JMenuItem image=new JMenuItem("Image");
+		JMenuItem image=new JMenuItem("400.jpeg");
 		background.add(image);
-		//exit.addActionListener(new ActionListener() {
-			//@Override
-			//public void actionPerformed(ActionEvent e) {
+		exit.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
 				
-			//}
-		//});
+			}
+		});
 		JMenuItem green=new JMenuItem("Green");
 		background.add(green);
 		green.addActionListener(new ActionListener() {

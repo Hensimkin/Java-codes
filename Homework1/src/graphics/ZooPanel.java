@@ -12,10 +12,8 @@ import zoo.*;
 
 public class ZooPanel extends JPanel implements Runnable 
 {
-
 	public void run() 
 	{
 		
 	}
-	
 }
