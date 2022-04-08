@@ -22,9 +22,9 @@ public class ZooFrame extends JFrame
 		JFrame frame = new JFrame("Zoo");
 		frame.setVisible(true);
 		frame.setSize(800,600);
-		frame.add(m);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
+		frame.add(m);
 		JLabel label=new JLabel();
 		frame.add(label);
 		//frame.pack();
