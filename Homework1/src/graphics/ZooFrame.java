@@ -42,12 +42,13 @@ public class ZooFrame extends JFrame
 				System.exit(0);
 			}
 		});	
-		JMenuItem image=new JMenuItem("400.jpeg");
+		JMenuItem image=new JMenuItem("Image");
 		background.add(image);
-		exit.addActionListener(new ActionListener() {
+		image.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				
+				ImageIcon zoo = new ImageIcon("400.jpeg"); 
+				label.setIcon(zoo);
 			}
 		});
 		JMenuItem green=new JMenuItem("Green");
