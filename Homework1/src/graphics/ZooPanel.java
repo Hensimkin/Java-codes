@@ -1,6 +1,9 @@
 package graphics;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 import animal.*;
 import diet.*;
@@ -10,20 +13,38 @@ import plants.*;
 import utilities.*;
 import zoo.*;
 
-public class ZooPanel extends JPanel implements Runnable 
+public class ZooPanel extends JPanel implements Runnable ,ActionListener
 {
+	JButton addanimal;
+	JButton moveanimal;
+	JButton clear;
+	JButton food;
+	JButton info;
+	JButton exit;
+	AddAnimalDialog a;
 	public void run() 
 	{
 		
 	}
 	public ZooPanel()
 	{
-		JButton addanimal=new JButton("Add Animal");
-		JButton moveanimal=new JButton("Move Animal");
-		JButton clear=new JButton("Clear");
-		JButton food=new JButton("Food");
-		JButton info=new JButton("Info");
-		JButton exit=new JButton("Exit");
+		addanimal=new JButton("Add Animal");
+		/*
+		addanimal.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) 
+			{
+				if(e.getSource()==addanimal)
+				{
+					a=new AddAnimalDialog();
+				}
+			}
+		});
+		*/
+		moveanimal=new JButton("Move Animal");
+		clear=new JButton("Clear");
+		food=new JButton("Food");
+		info=new JButton("Info");
+		exit=new JButton("Exit");
 		addanimal.setFocusable(false);
 		moveanimal.setFocusable(false);
 		clear.setFocusable(false);
@@ -37,5 +58,24 @@ public class ZooPanel extends JPanel implements Runnable
 		this.add(food);
 		this.add(info);
 		this.add(exit);
+	}
+	
+	
+	
+	public void actionPerformed(ActionEvent e) 
+	{
+	
+		if(e.getSource()==addanimal)
+		{
+			addanimal.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) 
+				{
+					if(e.getSource()==addanimal)
+					{
+						a=new AddAnimalDialog();
+					}
+				}
+			});
+		}
 	}
 }
