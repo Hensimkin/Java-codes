@@ -22,6 +22,7 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 	JButton info;
 	JButton exit;
 	AddAnimalDialog a;
+	
 	public void run() 
 	{
 		
@@ -35,6 +36,7 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 		food=new JButton("Food");
 		info=new JButton("Info");
 		exit=new JButton("Exit");
+		exit.addActionListener(this);
 		addanimal.setFocusable(false);
 		moveanimal.setFocusable(false);
 		clear.setFocusable(false);
@@ -58,6 +60,10 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 		if(e.getSource()==addanimal)
 		{
 			a=new AddAnimalDialog();
+		}
+		if(e.getSource()==exit)
+		{
+			System.exit(0);
 		}
 	}
 }

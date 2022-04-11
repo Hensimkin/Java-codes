@@ -15,7 +15,6 @@ import zoo.*;
 
 public class ZooFrame extends JFrame
 {
-	Animal array;
 	public static void main(String[] args) 
 	{
 		ZooPanel m=new ZooPanel();
@@ -39,7 +38,6 @@ public class ZooFrame extends JFrame
 		JMenuItem exit=new JMenuItem("Exit");
 		file.add(exit);
 		exit.addActionListener(new ActionListener() {
-			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
