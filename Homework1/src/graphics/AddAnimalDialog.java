@@ -3,6 +3,7 @@ package graphics;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -20,24 +21,26 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 	JComboBox list;
 	public AddAnimalDialog()
 	{
-		super();
+		//super();
 		String animals[]= {"Select Animal Type","Lion","Bear","Elephant","Giraffe","Turtle"};
-		this.setLayout(new FlowLayout());
-		this.setSize(500,200);
+		//this.setLayout(new GridLayout(1,2));
+		this.setSize(300,100);
 		this.setVisible(true);
 		//this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
 		this.setTitle("Add Animal");
 		list=new JComboBox(animals);
-		//list.setRenderer("hello");
+		list.setBounds(10,10,20,40);
 		list.addActionListener(this);
 		this.add(list);
 		JTextField field=new JTextField();
-		field.setPreferredSize(new Dimension(100,20));
-		field.setBounds(20,20,20,20);
+		//field.setPreferredSize(new Dimension(100,20));
+		
+		//field.setLayout(getLayout());
 		JButton button=new JButton("submit");
+		//field.setBounds(10,80,20,20);
 		button.addActionListener(this);
 		this.add(field,BorderLayout.SOUTH);
-		this.add(button);
+		//this.add(button);
 	}
 
 	
