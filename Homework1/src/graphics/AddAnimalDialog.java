@@ -13,5 +13,6 @@ public class AddAnimalDialog extends JDialog
 		super();
 		this.setSize(200,200);
 		this.setVisible(true);
+		this.setTitle("Add Animal");
 	}
 }

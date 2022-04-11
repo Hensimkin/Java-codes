@@ -15,7 +15,7 @@ import zoo.*;
 
 public class ZooFrame extends JFrame
 {
-	
+	Animal array;
 	public static void main(String[] args) 
 	{
 		ZooPanel m=new ZooPanel();

@@ -29,17 +29,7 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 	public ZooPanel()
 	{
 		addanimal=new JButton("Add Animal");
-		/*
-		addanimal.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) 
-			{
-				if(e.getSource()==addanimal)
-				{
-					a=new AddAnimalDialog();
-				}
-			}
-		});
-		*/
+		addanimal.addActionListener(this);
 		moveanimal=new JButton("Move Animal");
 		clear=new JButton("Clear");
 		food=new JButton("Food");
@@ -67,15 +57,7 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 	
 		if(e.getSource()==addanimal)
 		{
-			addanimal.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) 
-				{
-					if(e.getSource()==addanimal)
-					{
-						a=new AddAnimalDialog();
-					}
-				}
-			});
+			a=new AddAnimalDialog();
 		}
 	}
 }
