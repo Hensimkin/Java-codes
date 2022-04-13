@@ -1,5 +1,7 @@
 package animal;
 
+import java.awt.Color;
+
 import mobility.Point;
 
 /**
@@ -15,6 +17,11 @@ public abstract class Chew extends Animal
 		super(name, point);
 	}
 	
+	
+	public Chew(Point point,int size,Color col,int horSpeed,int verSpeed)
+	{
+		super(point,size,col,horSpeed,verSpeed);
+	}
 	
 	
 	public abstract void chew();

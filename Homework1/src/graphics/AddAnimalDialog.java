@@ -1,6 +1,7 @@
 package graphics;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -11,36 +12,59 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import animal.Animal;
 
 public class AddAnimalDialog extends JDialog implements ActionListener
 {
-	Animal []array=new Animal[10];
+	Animal object;
 	JComboBox list;
+	JComboBox hor;
+	JComboBox ver;
+	JComboBox color;
+	JButton button;
+	String type;
+	int num1,num2;
+	Color c;
 	public AddAnimalDialog()
 	{
 		//super();
-		String animals[]= {"Select Animal Type","Lion","Bear","Elephant","Giraffe","Turtle"};
-		//this.setLayout(new GridLayout(1,2));
-		this.setSize(300,100);
+		button=new JButton("Accept");
+		button.addActionListener(this);
+		JLabel label=new JLabel("Choose animal");
+		JLabel label2=new JLabel("Choose Horizontal speed");
+		JLabel label3=new JLabel("Choose Vertical speed");
+		JLabel label4=new JLabel("Enter size of animal 50-300");
+		JLabel label5=new JLabel("Select the color of the animal");
+		JLabel label6=new JLabel("Press to Finish");
+		Integer numbers[]= {1,2,3,4,5,6,7,8,9,10};
+		Integer numbers2[]= {1,2,3,4,5,6,7,8,9,10};
+		String animals[]= {"Lion","Bear","Elephant","Giraffe","Turtle"};
+		String colors[]= {"Natural","Blue","Red"};
+		this.setLayout(new GridLayout(6,1));
+		this.setSize(400,200);
 		this.setVisible(true);
-		//this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
 		this.setTitle("Add Animal");
 		list=new JComboBox(animals);
-		list.setBounds(10,10,20,40);
+		hor=new JComboBox(numbers);
+		ver=new JComboBox(numbers2);
 		list.addActionListener(this);
-		this.add(list);
+		color=new JComboBox(colors);
 		JTextField field=new JTextField();
-		//field.setPreferredSize(new Dimension(100,20));
-		
-		//field.setLayout(getLayout());
-		JButton button=new JButton("submit");
-		//field.setBounds(10,80,20,20);
-		button.addActionListener(this);
-		this.add(field,BorderLayout.SOUTH);
-		//this.add(button);
+		this.add(label);
+		this.add(list);
+		this.add(label2);
+		this.add(hor);
+		this.add(label3);
+		this.add(ver);
+		this.add(label4);
+		this.add(field);
+		this.add(label5);
+		this.add(color);
+		this.add(label6);
+		this.add(button);
 	}
 
 	
@@ -48,8 +72,6 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 	{
 		if(e.getSource()==list)
 		{
-			//System.out.println(list.getSelectedItem());
-			
 			if(list.getSelectedItem()=="Lion")
 			{
 				System.out.println("Lion");
@@ -60,5 +82,15 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 				System.out.println("Bear");
 			}
 		}
+		if(e.getSource()==button)
+		{
+			dispose();
+		}
+	}
+	
+	
+	public Animal getAnimal()
+	{
+		return null;
 	}
 }

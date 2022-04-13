@@ -22,7 +22,7 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 	JButton info;
 	JButton exit;
 	AddAnimalDialog a;
-	
+	Animal []array=new Animal[10];
 	public void run() 
 	{
 		
@@ -60,10 +60,15 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 		if(e.getSource()==addanimal)
 		{
 			a=new AddAnimalDialog();
+			//array[i]=a.getAnimal();
 		}
 		if(e.getSource()==exit)
 		{
 			System.exit(0);
+		}
+		if (e.getSource()==info)
+		{
+			
 		}
 	}
 }

@@ -1,5 +1,7 @@
 package animal;
 
+import java.awt.Color;
+
 import diet.Herbivore;
 import diet.IDiet;
 import mobility.*;
@@ -27,6 +29,12 @@ public class Elephant extends Chew
 		super.setWeight(500);
 		setTrunkLengh(trunkLengh);
 		super.setDiet(diet);
+	}
+	
+	
+	public Elephant(int size,Color col,int horSpeed,int verSpeed)
+	{
+		super(start,size,col,horSpeed,verSpeed);
 	}
 	
 	/**

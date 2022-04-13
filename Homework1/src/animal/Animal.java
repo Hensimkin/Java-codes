@@ -1,4 +1,7 @@
 package animal;
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+
 import diet.*;
 import food.*;
 import mobility.*;
@@ -15,18 +18,18 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 	private String name;
 	private double weight;
 	private IDiet diet;
-	private final int EAT_DISTANCE = 5;
+	//private final int EAT_DISTANCE = 5;
 	private int size;
-	//private Color col;
+	private Color col;
 	private int horSpeed;
 	private int verSpeed;
-	private boolean coordChanged;
-	private Thread thread;
+	private boolean coordChanged=false;
+	//private Thread thread;
 	private int x_dir;
 	private int y_dir;
 	private int eatCount;
-	//private ZooPanel pan;
-	//private BufferedImage img1, img2;
+	private ZooPanel pan;
+	private BufferedImage img1, img2;
 	
 	
 	
@@ -44,7 +47,15 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 		setName(name);
 	}
 	
-	
+	public Animal(Point point,int size,Color col,int horSpeed,int verSpeed)
+	{
+		super(point);
+		setName("NoName");
+		this.size=size;
+		this.col=col;
+		this.horSpeed=horSpeed;
+		this.verSpeed=verSpeed;
+	}
 	
 	
 	public abstract boolean eat(IEdible food);

@@ -1,5 +1,7 @@
 package animal;
 
+import java.awt.Color;
+
 import diet.Herbivore;
 import diet.IDiet;
 import food.*;
@@ -30,6 +32,12 @@ public class Turtle extends Chew
 		setAge(age);
 		super.setDiet(diet);
 	}
+	
+	public Turtle(int size,Color col,int horSpeed,int verSpeed)
+	{
+		super(start,size,col,horSpeed,verSpeed);
+	}
+	
 	
 	/**
 	 * a contractor the give the animal a name and start point

@@ -1,5 +1,7 @@
 package animal;
 
+import java.awt.Color;
+
 import diet.IDiet;
 import diet.Omnivore;
 import food.*;
@@ -30,6 +32,10 @@ public class Bear extends Roar
 		super.setDiet(diet);
 	}
 	
+	public Bear(int size,Color col,int horSpeed,int verSpeed)
+	{
+		super(start,size,col,horSpeed,verSpeed);
+	}
 	
 	/**
 	 * a contractor the give the animal a name and start point

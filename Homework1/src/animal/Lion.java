@@ -5,6 +5,8 @@ import food.IEdible;
 import mobility.*;
 import diet.IDiet;
 import utilities.MessageUtility;
+
+import java.awt.Color;
 import java.util.*;
 
 /**
@@ -29,6 +31,11 @@ public class Lion extends Roar
 		MessageUtility.logConstractor("Lion", name);
 		super.setWeight(408.2);
 		super.setDiet(diet);
+	}
+	
+	public Lion(int size,Color col,int horSpeed,int verSpeed)
+	{
+		super(start,size,col,horSpeed,verSpeed);
 	}
 	
 	
