@@ -15,7 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import animal.Animal;
+import animal.*;
 
 public class AddAnimalDialog extends JDialog implements ActionListener
 {
@@ -25,8 +25,9 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 	JComboBox ver;
 	JComboBox color;
 	JButton button;
+	JTextField field;
 	String type;
-	int num1,num2;
+	int num1,num2,size;
 	Color c;
 	public AddAnimalDialog()
 	{
@@ -52,7 +53,7 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 		ver=new JComboBox(numbers2);
 		list.addActionListener(this);
 		color=new JComboBox(colors);
-		JTextField field=new JTextField();
+		field=new JTextField();
 		this.add(label);
 		this.add(list);
 		this.add(label2);
@@ -65,6 +66,7 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 		this.add(color);
 		this.add(label6);
 		this.add(button);
+		
 	}
 
 	
@@ -74,16 +76,59 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 		{
 			if(list.getSelectedItem()=="Lion")
 			{
-				System.out.println("Lion");
+				type="Lion";
 			}
 			
 			if(list.getSelectedItem()=="Bear")
 			{
-				System.out.println("Bear");
+				type="Bear";
+			}
+			if(list.getSelectedItem()=="Elephant")
+			{
+				type="Elephant";
+			}
+			if(list.getSelectedItem()=="Giraffe")
+			{
+				type="Giraffe";
+			}
+			if(list.getSelectedItem()=="Turtle")
+			{
+				type="Turtle";
+			}
+		}
+		if(e.getSource()==hor)
+		{
+			num1=(int) hor.getSelectedItem();
+		}
+		if(e.getSource()==ver)
+		{
+			num2=(int) ver.getSelectedItem();
+		}
+		if(e.getSource()==field)
+		{
+			size=Integer.parseInt(field.getText());
+		}
+		if(e.getSource()==color)
+		{
+			if(color.getSelectedItem()=="Blue")
+			{
+			   c=Color.blue;
+			}
+			if(color.getSelectedItem()=="Red")
+			{
+			   c=Color.red;
+			}
+			if(color.getSelectedItem()=="Red")
+			{
+			   c=null;
 			}
 		}
 		if(e.getSource()==button)
 		{
+			if(type=="Lion")
+			{
+				object=new Lion(size,c,num1,num2);
+			}
 			dispose();
 		}
 	}
