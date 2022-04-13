@@ -15,6 +15,7 @@ import zoo.*;
 
 public class ZooPanel extends JPanel implements Runnable ,ActionListener
 {
+	int i=0;
 	JButton addanimal;
 	JButton moveanimal;
 	JButton clear;

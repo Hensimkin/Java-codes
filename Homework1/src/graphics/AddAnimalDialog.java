@@ -13,6 +13,7 @@ import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import animal.*;
@@ -28,7 +29,7 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 	JTextField field;
 	String type;
 	int num1,num2,size;
-	Color c;
+	String c;
 	public AddAnimalDialog()
 	{
 		//super();
@@ -56,14 +57,19 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 		field=new JTextField();
 		this.add(label);
 		this.add(list);
+		list.addActionListener(this);
 		this.add(label2);
 		this.add(hor);
+		hor.addActionListener(this);
 		this.add(label3);
 		this.add(ver);
+		ver.addActionListener(this);
 		this.add(label4);
 		this.add(field);
+		field.addActionListener(this);
 		this.add(label5);
 		this.add(color);
+		color.addActionListener(this);
 		this.add(label6);
 		this.add(button);
 		
@@ -104,38 +110,71 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 		{
 			num2=(int) ver.getSelectedItem();
 		}
+		/*
 		if(e.getSource()==field)
 		{
-			size=Integer.parseInt(field.getText());
+			
+			int input=Integer.parseInt(field.getText());
+			size=input;
 		}
+		*/
 		if(e.getSource()==color)
 		{
 			if(color.getSelectedItem()=="Blue")
 			{
-			   c=Color.blue;
+			   c="Blue";
 			}
 			if(color.getSelectedItem()=="Red")
 			{
-			   c=Color.red;
+			   c="Red";
 			}
-			if(color.getSelectedItem()=="Red")
+			if(color.getSelectedItem()=="Natural")
 			{
-			   c=null;
+			   c="Natural";
 			}
 		}
 		if(e.getSource()==button)
 		{
-			if(type=="Lion")
+			size=Integer.parseInt(field.getText());
+			if(size<50||size>300) 
 			{
-				object=new Lion(size,c,num1,num2);
+				JOptionPane.showMessageDialog(null, "Size must be between 50 and 300");
 			}
-			dispose();
+			else
+			{
+				if(type=="Lion")
+				{
+					size=(int) (size*0.8);
+					object=new Lion(size,c,num1,num2);
+				}
+				if(type=="Bear")
+				{
+					size=(int) (size*1.5);
+					object=new Bear(size,c,num1,num2);
+				}
+				if(type=="Elephant")
+				{
+					size=(int) (size*10);
+					object=new Elephant(size,c,num1,num2);
+				}
+				if(type=="Giraffe")
+				{
+					size=(int) (size*2.2);
+					object=new Giraffe(size,c,num1,num2);
+				}
+				if(type=="Turtle")
+				{
+					size=(int) (size*0.5);
+					object=new Turtle(size,c,num1,num2);
+				}
+				dispose();
+			}
 		}
 	}
 	
 	
 	public Animal getAnimal()
 	{
-		return null;
+		return object;
 	}
 }

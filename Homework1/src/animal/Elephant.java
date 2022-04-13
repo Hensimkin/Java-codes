@@ -32,7 +32,7 @@ public class Elephant extends Chew
 	}
 	
 	
-	public Elephant(int size,Color col,int horSpeed,int verSpeed)
+	public Elephant(int size,String col,int horSpeed,int verSpeed)
 	{
 		super(start,size,col,horSpeed,verSpeed);
 	}

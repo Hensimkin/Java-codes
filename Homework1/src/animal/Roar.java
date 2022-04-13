@@ -17,7 +17,7 @@ public  abstract class Roar extends Animal
 	}
 	
 	
-	public Roar(Point point,int size,Color col,int horSpeed,int verSpeed) 
+	public Roar(Point point,int size,String col,int horSpeed,int verSpeed) 
 	{
 		super(point,size,col,horSpeed,verSpeed);
 	}

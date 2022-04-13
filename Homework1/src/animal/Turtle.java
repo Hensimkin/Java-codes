@@ -33,7 +33,7 @@ public class Turtle extends Chew
 		super.setDiet(diet);
 	}
 	
-	public Turtle(int size,Color col,int horSpeed,int verSpeed)
+	public Turtle(int size,String col,int horSpeed,int verSpeed)
 	{
 		super(start,size,col,horSpeed,verSpeed);
 	}

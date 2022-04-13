@@ -20,7 +20,7 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 	private IDiet diet;
 	//private final int EAT_DISTANCE = 5;
 	private int size;
-	private Color col;
+	private String col;
 	private int horSpeed;
 	private int verSpeed;
 	private boolean coordChanged=false;
@@ -47,7 +47,7 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 		setName(name);
 	}
 	
-	public Animal(Point point,int size,Color col,int horSpeed,int verSpeed)
+	public Animal(Point point,int size,String col,int horSpeed,int verSpeed)
 	{
 		super(point);
 		setName("NoName");

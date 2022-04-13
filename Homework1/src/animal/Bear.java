@@ -32,7 +32,7 @@ public class Bear extends Roar
 		super.setDiet(diet);
 	}
 	
-	public Bear(int size,Color col,int horSpeed,int verSpeed)
+	public Bear(int size,String col,int horSpeed,int verSpeed)
 	{
 		super(start,size,col,horSpeed,verSpeed);
 	}

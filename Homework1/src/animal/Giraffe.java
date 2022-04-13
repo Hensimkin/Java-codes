@@ -33,7 +33,7 @@ public class Giraffe extends Chew
 		super.setDiet(diet);
 	}
 	
-	public Giraffe(int size,Color col,int horSpeed,int verSpeed)
+	public Giraffe(int size,String col,int horSpeed,int verSpeed)
 	{
 		super(start,size,col,horSpeed,verSpeed);
 	}
