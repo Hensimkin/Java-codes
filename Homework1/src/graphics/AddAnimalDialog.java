@@ -17,6 +17,11 @@ import javax.swing.JTextField;
 
 import animal.*;
 
+/**
+ * The class that take care of add animal option
+ * @author Adir Melker 316614569 and Hen Simkin 208514109
+ *
+ */
 public class AddAnimalDialog extends JDialog implements ActionListener
 {
 	Animal object;
@@ -29,6 +34,9 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 	String type;
 	int num1,num2,size;
 	Color c;
+	/**
+	 * Default Contractor that add buttons to the panel 
+	 */
 	public AddAnimalDialog()
 	{
 		//super();
@@ -69,7 +77,9 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 		
 	}
 
-	
+	/**
+	 * check what the user select (which animal,horizontal and vertical speed,size color) 
+	 */
 	public void actionPerformed(ActionEvent e) 
 	{
 		if(e.getSource()==list)

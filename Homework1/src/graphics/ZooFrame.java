@@ -12,7 +12,11 @@ import plants.*;
 import utilities.*;
 import zoo.*;
 
-
+/**
+ * class that make the main frame of the program
+ * @author Adir Melker 316614569 and Hen Simkin 208514109
+ *
+ */
 public class ZooFrame extends JFrame
 {
 	public static void main(String[] args) 
@@ -26,7 +30,6 @@ public class ZooFrame extends JFrame
 		frame.add(m,BorderLayout.SOUTH);
 		JLabel label=new JLabel();
 		frame.add(label);
-		//frame.pack();
 		JMenuBar menuBar=new JMenuBar();
 		frame.setJMenuBar(menuBar);
 		JMenu file=new JMenu("File");

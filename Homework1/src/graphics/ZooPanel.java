@@ -13,6 +13,11 @@ import plants.*;
 import utilities.*;
 import zoo.*;
 
+/**
+ * class that make and add buttons to the panel in the main frame
+ * @author Adir Melker 316614569 and Hen Simkin 208514109
+ *
+ */
 public class ZooPanel extends JPanel implements Runnable ,ActionListener
 {
 	JButton addanimal;
@@ -27,6 +32,9 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 	{
 		
 	}
+	/**
+	 * Default Contractor that add buttons to the panel 
+	 */
 	public ZooPanel()
 	{
 		addanimal=new JButton("Add Animal");

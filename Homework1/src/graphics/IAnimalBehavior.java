@@ -1,5 +1,6 @@
 package graphics;
 
+
 public interface IAnimalBehavior {
 
 	public String getAnimalName();
