@@ -48,7 +48,7 @@ public class ZooFrame extends JFrame
 			
 			public void actionPerformed(ActionEvent e) {
 				label.setBackground(Color.white);
-				ImageIcon zoo = new ImageIcon("400.jpeg"); 
+				ImageIcon zoo = new ImageIcon("savanna.png"); 
 				label.setIcon(zoo);
 			}
 		});
@@ -84,7 +84,7 @@ public class ZooFrame extends JFrame
 				frameMessage.setSize(300,300);
 				frameMessage.setVisible(true);
 				frameMessage.add(labelWork2);
-				ImageIcon aboutIcon=new ImageIcon("about.png");
+				ImageIcon aboutIcon=new ImageIcon("about.jpeg");
 				labelWork2.setIcon(aboutIcon);
 				JButton btOk=new JButton("OK");
 				btOk.setFocusable(false);
