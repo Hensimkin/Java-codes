@@ -158,12 +158,6 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 				{
 					JOptionPane.showMessageDialog(null, "Size must be between 50 and 300");
 				}
-				/*
-				else if()
-				{
-					
-				}
-				*/
 				else
 				{
 					if(type=="Lion")
