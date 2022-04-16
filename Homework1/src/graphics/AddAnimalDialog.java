@@ -8,6 +8,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
@@ -25,6 +26,7 @@ import animal.*;
  */
 public class AddAnimalDialog extends JDialog implements ActionListener
 {
+	JLabel animalt;
 	Animal object;
 	JComboBox list;
 	JComboBox hor;
@@ -36,6 +38,8 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 	int num1=0,num2=0,size;
 	String c="NoString";
     static int i=0;
+    ImageIcon animal;    
+    
 	/**
 	 * Default Contractor that add buttons to the panel 
 	 */
@@ -172,7 +176,8 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 						ZooPanel.data[i][4]=num2;
 						ZooPanel.data[i][5]=0;
 						i++;
-						
+						animal=new ImageIcon("lio_n_1.png");
+						ZooFrame.label.setIcon(animal);
 					}
 					if(type=="Bear")
 					{

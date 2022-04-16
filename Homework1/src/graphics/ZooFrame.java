@@ -19,16 +19,20 @@ import zoo.*;
  */
 public class ZooFrame extends JFrame
 {
+	
+	static JFrame frame;
+	static JLabel label;
+	static ImageIcon pic;
 	public static void main(String[] args) 
 	{
 		ZooPanel m=new ZooPanel();
-		JFrame frame = new JFrame("Zoo");
+		frame = new JFrame("Zoo");
 		frame.setVisible(true);
 		frame.setSize(800,600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.add(m,BorderLayout.SOUTH);
-		JLabel label=new JLabel();
+		label=new JLabel();
 		frame.add(label);
 		JMenuBar menuBar=new JMenuBar();
 		frame.setJMenuBar(menuBar);
@@ -50,9 +54,12 @@ public class ZooFrame extends JFrame
 		image.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
+				/*
 				label.setBackground(Color.white);
 				ImageIcon zoo = new ImageIcon("savanna.png"); 
 				label.setIcon(zoo);
+				*/
+				
 			}
 		});
 		JMenuItem green=new JMenuItem("Green");
@@ -60,9 +67,12 @@ public class ZooFrame extends JFrame
 		green.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				frame.getContentPane().setBackground(Color.green);
+				/*
 				label.setIcon(null);
 				label.setBackground(Color.GREEN);
 				label.setOpaque(true);
+				*/
 			}
 		});
 		JMenuItem none=new JMenuItem("None");
@@ -71,9 +81,12 @@ public class ZooFrame extends JFrame
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
+				frame.getContentPane().setBackground(null);
+				/*
 				label.setIcon(null);
 				label.setBackground(Color.white);
 				label.setOpaque(false);
+				*/
 			}
 		});
 		JMenuItem help2=new JMenuItem("Help");
