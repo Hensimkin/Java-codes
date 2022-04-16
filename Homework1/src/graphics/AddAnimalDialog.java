@@ -18,6 +18,11 @@ import javax.swing.JTextField;
 
 import animal.*;
 
+/**
+ * The class that take care of add animal option
+ * @author Adir Melker 316614569 and Hen Simkin 208514109
+ *
+ */
 public class AddAnimalDialog extends JDialog implements ActionListener
 {
 	Animal object;
@@ -27,9 +32,13 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 	JComboBox color;
 	JButton button;
 	JTextField field;
-	String type;
-	int num1,num2,size;
-	String c;
+	String type="NoString";
+	int num1=0,num2=0,size;
+	String c="NoString";
+    static int i=0;
+	/**
+	 * Default Contractor that add buttons to the panel 
+	 */
 	public AddAnimalDialog()
 	{
 		//super();
@@ -75,7 +84,9 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 		
 	}
 
-	
+	/**
+	 * check what the user select (which animal,horizontal and vertical speed,size color) 
+	 */
 	public void actionPerformed(ActionEvent e) 
 	{
 		if(e.getSource()==list)
@@ -101,6 +112,7 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 			{
 				type="Turtle";
 			}
+			
 		}
 		if(e.getSource()==hor)
 		{
@@ -135,46 +147,102 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 		}
 		if(e.getSource()==button)
 		{
-			size=Integer.parseInt(field.getText());
-			if(size<50||size>300) 
+			if(num1==0||num2==0||type=="NoString"||c=="NoString")
 			{
-				JOptionPane.showMessageDialog(null, "Size must be between 50 and 300");
+				JOptionPane.showMessageDialog(null, "Please enter the missing details !!");
 			}
 			else
 			{
-				if(type=="Lion")
+				size=Integer.parseInt(field.getText());
+				if(size<50||size>300) 
 				{
-					size=(int) (size*0.8);
-					object=new Lion(size,c,num1,num2);
+					JOptionPane.showMessageDialog(null, "Size must be between 50 and 300");
 				}
-				if(type=="Bear")
+				/*
+				else if()
 				{
-					size=(int) (size*1.5);
-					object=new Bear(size,c,num1,num2);
+					
 				}
-				if(type=="Elephant")
+				*/
+				else
 				{
-					size=(int) (size*10);
-					object=new Elephant(size,c,num1,num2);
+					if(type=="Lion")
+					{
+						size=(int) (size*0.8);
+						object=new Lion(size,c,num1,num2);
+						ZooPanel.array[i]=object;
+						ZooPanel.data[i][0]=type;
+						ZooPanel.data[i][1]=c;
+						ZooPanel.data[i][2]=object.getWeight();
+						ZooPanel.data[i][3]=num1;
+						ZooPanel.data[i][4]=num2;
+						ZooPanel.data[i][5]=0;
+						i++;
+						
+					}
+					if(type=="Bear")
+					{
+						size=(int) (size*1.5);
+						object=new Bear(size,c,num1,num2);
+						ZooPanel.array[i]=object;
+						ZooPanel.data[i][0]=type;
+						ZooPanel.data[i][1]=c;
+						ZooPanel.data[i][2]=object.getWeight();
+						ZooPanel.data[i][3]=num1;
+						ZooPanel.data[i][4]=num2;
+						ZooPanel.data[i][5]=0;
+						i++;
+					}
+					if(type=="Elephant")
+					{
+						size=(int) (size*10);
+						object=new Elephant(size,c,num1,num2);
+						ZooPanel.array[i]=object;
+						ZooPanel.data[i][0]=type;
+						ZooPanel.data[i][1]=c;
+						ZooPanel.data[i][2]=object.getWeight();
+						ZooPanel.data[i][3]=num1;
+						ZooPanel.data[i][4]=num2;
+						ZooPanel.data[i][5]=0;
+						i++;
+					}
+					if(type=="Giraffe")
+					{
+						size=(int) (size*2.2);
+						object=new Giraffe(size,c,num1,num2);
+						ZooPanel.array[i]=object;
+						ZooPanel.data[i][0]=type;
+						ZooPanel.data[i][1]=c;
+						ZooPanel.data[i][2]=object.getWeight();
+						ZooPanel.data[i][3]=num1;
+						ZooPanel.data[i][4]=num2;
+						ZooPanel.data[i][5]=0;
+						i++;
+					}
+					if(type=="Turtle")
+					{
+						size=(int) (size*0.5);
+						object=new Turtle(size,c,num1,num2);
+						ZooPanel.array[i]=object;
+						ZooPanel.data[i][0]=type;
+						ZooPanel.data[i][1]=c;
+						ZooPanel.data[i][2]=object.getWeight();
+						ZooPanel.data[i][3]=num1;
+						ZooPanel.data[i][4]=num2;
+						ZooPanel.data[i][5]=0;
+						i++;
+					}
+					JOptionPane.showMessageDialog(null, "Animal added");
+					dispose();
 				}
-				if(type=="Giraffe")
-				{
-					size=(int) (size*2.2);
-					object=new Giraffe(size,c,num1,num2);
-				}
-				if(type=="Turtle")
-				{
-					size=(int) (size*0.5);
-					object=new Turtle(size,c,num1,num2);
-				}
-				dispose();
 			}
 		}
 	}
 	
-	
+	/*
 	public Animal getAnimal()
 	{
 		return object;
 	}
+	*/
 }

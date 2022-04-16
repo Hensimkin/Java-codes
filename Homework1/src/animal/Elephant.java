@@ -35,6 +35,9 @@ public class Elephant extends Chew
 	public Elephant(int size,String col,int horSpeed,int verSpeed)
 	{
 		super(start,size,col,horSpeed,verSpeed);
+		super.setWeight(500);
+		setTrunkLengh(trunkLengh);
+		super.setDiet(diet);
 	}
 	
 	/**

@@ -12,7 +12,11 @@ import plants.*;
 import utilities.*;
 import zoo.*;
 
-
+/**
+ * class that make the main frame of the program
+ * @author Adir Melker 316614569 and Hen Simkin 208514109
+ *
+ */
 public class ZooFrame extends JFrame
 {
 	public static void main(String[] args) 
@@ -26,7 +30,6 @@ public class ZooFrame extends JFrame
 		frame.add(m,BorderLayout.SOUTH);
 		JLabel label=new JLabel();
 		frame.add(label);
-		//frame.pack();
 		JMenuBar menuBar=new JMenuBar();
 		frame.setJMenuBar(menuBar);
 		JMenu file=new JMenu("File");
@@ -48,7 +51,7 @@ public class ZooFrame extends JFrame
 			
 			public void actionPerformed(ActionEvent e) {
 				label.setBackground(Color.white);
-				ImageIcon zoo = new ImageIcon("400.jpeg"); 
+				ImageIcon zoo = new ImageIcon("savanna.png"); 
 				label.setIcon(zoo);
 			}
 		});
@@ -84,7 +87,7 @@ public class ZooFrame extends JFrame
 				frameMessage.setSize(300,300);
 				frameMessage.setVisible(true);
 				frameMessage.add(labelWork2);
-				ImageIcon aboutIcon=new ImageIcon("about.png");
+				ImageIcon aboutIcon=new ImageIcon("about.jpeg");
 				labelWork2.setIcon(aboutIcon);
 				JButton btOk=new JButton("OK");
 				btOk.setFocusable(false);

@@ -36,6 +36,9 @@ public class Turtle extends Chew
 	public Turtle(int size,String col,int horSpeed,int verSpeed)
 	{
 		super(start,size,col,horSpeed,verSpeed);
+		super.setWeight(1);
+		setAge(age);
+		super.setDiet(diet);
 	}
 	
 	
