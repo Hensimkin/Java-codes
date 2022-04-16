@@ -176,8 +176,8 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 						ZooPanel.data[i][4]=num2;
 						ZooPanel.data[i][5]=0;
 						i++;
-						animal=new ImageIcon("lio_n_1.png");
-						ZooFrame.label.setIcon(animal);
+						//animal=new ImageIcon("lio_n_1.png");
+						//ZooFrame.label.setIcon(animal);
 					}
 					if(type=="Bear")
 					{
