@@ -51,6 +51,7 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 		addanimal.addActionListener(this);
 		moveanimal=new JButton("Move Animal");
 		clear=new JButton("Clear");
+		clear.addActionListener(this);
 		food=new JButton("Food");
 		info=new JButton("Info");
 		info.addActionListener(this);
@@ -88,6 +89,21 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 				JOptionPane.showMessageDialog(null, "Can't add more animals","Error",JOptionPane.WARNING_MESSAGE);
 			}
 		}
+		if(e.getSource()==clear)
+		{
+			array=new Animal[10];
+			for(int i=0;i<AddAnimalDialog.i;i++)
+			{
+				ZooPanel.data[i][0]=null;
+				ZooPanel.data[i][1]=null;
+				ZooPanel.data[i][2]=null;
+				ZooPanel.data[i][3]=null;
+				ZooPanel.data[i][4]=null;
+				ZooPanel.data[i][5]=null;
+			}
+			AddAnimalDialog.i=0;
+		}
+		
 		if(e.getSource()==exit)
 		{
 			System.exit(0);
