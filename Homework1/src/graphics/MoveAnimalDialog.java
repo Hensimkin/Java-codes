@@ -46,8 +46,9 @@ public class MoveAnimalDialog extends JDialog implements ActionListener
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+	public void actionPerformed(ActionEvent e)
+	{		
+		//if (e.getSource()==xFiled)
 		
 	}
 
