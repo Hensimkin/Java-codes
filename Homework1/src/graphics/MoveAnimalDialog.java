@@ -31,10 +31,12 @@ public class MoveAnimalDialog extends JDialog implements ActionListener
 		this.add(labelX);
 		JTextField xFiled=new JTextField();
 		this.add(xFiled);
+		xFiled.addActionListener(this);
 		JLabel labelY=new JLabel("enter y (0-600)");
 		this.add(labelY);
 		JTextField yFiled=new JTextField();
 		this.add(yFiled);
+		yFiled.addActionListener(this);
 		JLabel finish=new JLabel("click to finish");
 		this.add(finish);
 		JButton move=new JButton("Move");
