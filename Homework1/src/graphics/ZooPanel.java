@@ -50,6 +50,7 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 		addanimal=new JButton("Add Animal");
 		addanimal.addActionListener(this);
 		moveanimal=new JButton("Move Animal");
+		moveanimal.addActionListener(this);
 		clear=new JButton("Clear");
 		clear.addActionListener(this);
 		food=new JButton("Food");
@@ -113,8 +114,13 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 			table=new JTable(data,col);
 			z=new Table(table);
 		}
+		if (e.getSource()==moveanimal)
+		{
+			MoveAnimalDialog m=new MoveAnimalDialog();
+		}
 		
 	}
+	
 	
 
 	
