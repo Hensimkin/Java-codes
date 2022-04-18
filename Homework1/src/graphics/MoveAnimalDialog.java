@@ -6,14 +6,14 @@ import javax.swing.*;
 import java.awt.GridLayout;
 import java.awt.event.*;
 
+/**
+ * The class that take care of move animal option
+ * @author Adir Melker 316614569 and Hen Simkin 208514109
+ *
+ */
 
 public class MoveAnimalDialog extends JDialog implements ActionListener
 {
-
-	
-	private Point location;
-	private JButton button;
-	private float x,y;
 	
 	public MoveAnimalDialog()
 	{
