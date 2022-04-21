@@ -28,6 +28,7 @@ public class MoveAnimalDialog extends JDialog implements ActionListener
 	 int x,y;
 	 Point p;
 	 int lionc=1,bearc=1,elephantc=1,giraffec=1,turtlec=1;
+	 String f;
 	public MoveAnimalDialog()
 	{
 		this.setLayout(new GridLayout(4,1));
@@ -101,14 +102,16 @@ public class MoveAnimalDialog extends JDialog implements ActionListener
 				x=Integer.parseInt(xFiled.getText());
 				y=Integer.parseInt(yFiled.getText());
 			}
+			type=(String)allAniaml.getSelectedItem();
 			for(int i=0;i<AddAnimalDialog.i;i++)
 			{
-				animal=ZooPanel.array.get(i);
-				if(animal.getAnimalName()==type)
+				f=ZooPanel.array.get(i).getName();
+				if(f.equals(type))
 				{
 					p=new Point(x,y);
-					animal.setLocation(p);
+					ZooPanel.array.get(i).setLocation(p);
 					JOptionPane.showMessageDialog(null, "Animal moved");
+					dispose();
 				}
 			}
 		}

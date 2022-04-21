@@ -67,4 +67,6 @@ public abstract class Mobile implements Ilocatable  {
 	{
 		return this.totalDistance;
 	}
+	
+	
 }
