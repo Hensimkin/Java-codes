@@ -2,13 +2,19 @@ package graphics;
 
 import java.awt.GridLayout;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class Food extends JFrame
 {
 	Food()
 	{
+		JLabel help=new JLabel();
+		ImageIcon icon=new ImageIcon("about.jpeg");
+		help.setIcon(icon);
+		help.setBounds(150,25,200,100);
 		this.setLayout(null);
 		this.setSize(400,250);
 		this.setVisible(true);
@@ -22,5 +28,6 @@ public class Food extends JFrame
 		JButton meat=new JButton("Meat");
 		meat.setBounds(250,150,100,40);
 		this.add(meat);
+		this.add(help);
 	}
 }
