@@ -32,9 +32,9 @@ public class Bear extends Roar
 		super.setDiet(diet);
 	}
 	
-	public Bear(int size,String col,int horSpeed,int verSpeed)
+	public Bear(String name,int size,String col,int horSpeed,int verSpeed)
 	{
-		super(start,size,col,horSpeed,verSpeed);
+		super(name,start,size,col,horSpeed,verSpeed);
 		super.setWeight(308.2);
 		setFurColor("GREY");
 		super.setDiet(diet);

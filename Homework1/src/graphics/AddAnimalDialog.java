@@ -38,7 +38,9 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 	int num1=0,num2=0,size;
 	String c="NoString";
     static int i=0;
-    ImageIcon animal;    
+    ImageIcon animal;
+    int lionc=1,bearc=1,elephantc=1,giraffec=1,turtlec=1;
+    String name;
     
 	/**
 	 * Default Contractor that add buttons to the panel 
@@ -166,69 +168,77 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 				{
 					if(type=="Lion")
 					{
+						name="Lion"+lionc;
+						//MoveAnimalDialog.allAniaml.addItem(name);
 						size=(int) (size*0.8);
-						object=new Lion(size,c,num1,num2);
-						ZooPanel.array[i]=object;
+						object=new Lion(name,size,c,num1,num2);
+						ZooPanel.array.add(object);
 						ZooPanel.data[i][0]=type;
 						ZooPanel.data[i][1]=c;
 						ZooPanel.data[i][2]=object.getWeight();
 						ZooPanel.data[i][3]=num1;
 						ZooPanel.data[i][4]=num2;
-						ZooPanel.data[i][5]=0;
+						ZooPanel.data[i][5]=object.getEatcounter();;
 						i++;
-						//animal=new ImageIcon("lio_n_1.png");
-						//ZooFrame.label.setIcon(animal);
 					}
 					if(type=="Bear")
 					{
+						name="Bear"+bearc;
+						//MoveAnimalDialog.allAniaml.addItem(name);
 						size=(int) (size*1.5);
-						object=new Bear(size,c,num1,num2);
-						ZooPanel.array[i]=object;
+						object=new Bear(name,size,c,num1,num2);
+						ZooPanel.array.add(object);
 						ZooPanel.data[i][0]=type;
 						ZooPanel.data[i][1]=c;
 						ZooPanel.data[i][2]=object.getWeight();
 						ZooPanel.data[i][3]=num1;
 						ZooPanel.data[i][4]=num2;
-						ZooPanel.data[i][5]=0;
+						ZooPanel.data[i][5]=object.getEatcounter();;
 						i++;
 					}
 					if(type=="Elephant")
 					{
+						name="Elephant"+elephantc;
+						//MoveAnimalDialog.allAniaml.addItem(name);
 						size=(int) (size*10);
-						object=new Elephant(size,c,num1,num2);
-						ZooPanel.array[i]=object;
+						object=new Elephant(name,size,c,num1,num2);
+						ZooPanel.array.add(object);
 						ZooPanel.data[i][0]=type;
 						ZooPanel.data[i][1]=c;
 						ZooPanel.data[i][2]=object.getWeight();
 						ZooPanel.data[i][3]=num1;
 						ZooPanel.data[i][4]=num2;
-						ZooPanel.data[i][5]=0;
+						ZooPanel.data[i][5]=object.getEatcounter();;
 						i++;
 					}
 					if(type=="Giraffe")
 					{
+						name="Giraffe"+giraffec;
+						//MoveAnimalDialog.allAniaml.addItem(name);
 						size=(int) (size*2.2);
-						object=new Giraffe(size,c,num1,num2);
-						ZooPanel.array[i]=object;
+						object=new Giraffe(name,size,c,num1,num2);
+						ZooPanel.array.add(object);
 						ZooPanel.data[i][0]=type;
 						ZooPanel.data[i][1]=c;
 						ZooPanel.data[i][2]=object.getWeight();
 						ZooPanel.data[i][3]=num1;
 						ZooPanel.data[i][4]=num2;
-						ZooPanel.data[i][5]=0;
+						ZooPanel.data[i][5]=object.getEatcounter();;
 						i++;
 					}
 					if(type=="Turtle")
 					{
+						name="Turtle"+turtlec;
+						//MoveAnimalDialog.allAniaml.addItem(name);
 						size=(int) (size*0.5);
-						object=new Turtle(size,c,num1,num2);
-						ZooPanel.array[i]=object;
+						object=new Turtle(name,size,c,num1,num2);
+						ZooPanel.array.add(object);
 						ZooPanel.data[i][0]=type;
 						ZooPanel.data[i][1]=c;
 						ZooPanel.data[i][2]=object.getWeight();
 						ZooPanel.data[i][3]=num1;
 						ZooPanel.data[i][4]=num2;
-						ZooPanel.data[i][5]=0;
+						ZooPanel.data[i][5]=object.getEatcounter();
 						i++;
 					}
 					JOptionPane.showMessageDialog(null, "Animal added");

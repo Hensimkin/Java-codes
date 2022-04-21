@@ -27,7 +27,7 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 	//private Thread thread;
 	private int x_dir;
 	private int y_dir;
-	private int eatCount;
+	private int eatCount=0;
 	private ZooPanel pan;
 	private BufferedImage img1, img2;
 	
@@ -47,14 +47,14 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 		setName(name);
 	}
 	
-	public Animal(Point point,int size,String col,int horSpeed,int verSpeed)
+	public Animal(String name,Point point,int size,String col,int horSpeed,int verSpeed)
 	{
 		super(point);
-		setName("NoName");
 		this.size=size;
 		this.col=col;
 		this.horSpeed=horSpeed;
 		this.verSpeed=verSpeed;
+		this.name=name;
 	}
 	
 	
@@ -155,6 +155,11 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 		{
 			return 0;
 		}
+	}
+	
+	public int getEatcounter()
+	{
+		return this.eatCount;
 	}
 
 }

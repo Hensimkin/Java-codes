@@ -18,9 +18,9 @@ public abstract class Chew extends Animal
 	}
 	
 	
-	public Chew(Point point,int size,String col,int horSpeed,int verSpeed)
+	public Chew(String name,Point point,int size,String col,int horSpeed,int verSpeed)
 	{
-		super(point,size,col,horSpeed,verSpeed);
+		super(name,point,size,col,horSpeed,verSpeed);
 	}
 	
 	

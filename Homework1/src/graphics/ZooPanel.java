@@ -32,8 +32,8 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 	AddAnimalDialog a;
 	String name;
 	Table z;
-	static Animal[] array=new Animal[10];
-	//static ArrayList<Animal> array22=new ArrayList<>(10);
+	//static Animal[] array=new Animal[10];
+	static ArrayList<Animal> array=new ArrayList<Animal>(10);
 	JTable table;
 	String []col= {"Animal","Color","weight","Hor.Speed","Ver.Speed","Eat Counter"};
 	static Object[][] data= new Object[10][6];
@@ -92,7 +92,8 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 		}
 		if(e.getSource()==clear)
 		{
-			array=new Animal[10];
+			
+			array.clear();
 			for(int i=0;i<AddAnimalDialog.i;i++)
 			{
 				ZooPanel.data[i][0]=null;
@@ -103,6 +104,7 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 				ZooPanel.data[i][5]=null;
 			}
 			AddAnimalDialog.i=0;
+			
 		}
 		
 		if(e.getSource()==exit)
@@ -116,7 +118,14 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 		}
 		if (e.getSource()==moveanimal)
 		{
-			MoveAnimalDialog m=new MoveAnimalDialog();
+			if (array.isEmpty())
+			{
+				JOptionPane.showMessageDialog(null, "Can't move animals","Error",JOptionPane.WARNING_MESSAGE);
+			}
+			else
+			{
+				MoveAnimalDialog m=new MoveAnimalDialog();
+			}
 		}
 		
 	}

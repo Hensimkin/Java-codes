@@ -33,9 +33,9 @@ public class Giraffe extends Chew
 		super.setDiet(diet);
 	}
 	
-	public Giraffe(int size,String col,int horSpeed,int verSpeed)
+	public Giraffe(String name,int size,String col,int horSpeed,int verSpeed)
 	{
-		super(start,size,col,horSpeed,verSpeed);
+		super(name,start,size,col,horSpeed,verSpeed);
 		super.setWeight(450);
 		setNeckLength(neckLength);
 		super.setDiet(diet);

@@ -33,9 +33,9 @@ public class Lion extends Roar
 		super.setDiet(diet);
 	}
 	
-	public Lion(int size,String col,int horSpeed,int verSpeed)
+	public Lion(String name,int size,String col,int horSpeed,int verSpeed)
 	{
-		super(start,size,col,horSpeed,verSpeed);
+		super(name,start,size,col,horSpeed,verSpeed);
 		super.setWeight(408.2);
 		super.setDiet(diet);
 	}
