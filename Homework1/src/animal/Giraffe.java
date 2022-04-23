@@ -126,4 +126,17 @@ public class Giraffe extends Chew
 	}
 	
 	
+	public void dircheck(Point p)
+	{
+		if(start.checkx(p)==true)
+		{
+			super.setX_dir(1);
+		}
+		else
+		{
+			super.setX_dir(-1);
+		}
+	}
+	
+	
 }

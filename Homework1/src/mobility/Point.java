@@ -105,6 +105,31 @@ public class Point
 	{
 		return String.format("%d,%d",this.getX(),this.getY());
 	}
+	
+	
+	public boolean checkx(Point p)
+	{
+		if(this.x>p.getX())
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public boolean checky(Point p)
+	{
+		if(this.y>p.getY())
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 }
 
 

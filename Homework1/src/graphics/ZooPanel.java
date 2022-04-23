@@ -22,6 +22,7 @@ import zoo.*;
 public class ZooPanel extends JPanel implements Runnable ,ActionListener
 {
 	int i=0;
+	Plant plant=null;
 	JButton addanimal;
 	JButton moveanimal;
 	JButton clear;
@@ -138,7 +139,21 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 		
 	}
 	
+	public void manageZoo()
+	{
+		
+	}
 	
+	
+	public void paintComponent(Graphics g)
+	{
+		
+	}
+	
+	static public boolean isChanged()
+	{
+		return true;
+	}
 
 	
 	

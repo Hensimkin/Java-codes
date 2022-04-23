@@ -125,4 +125,19 @@ public class Turtle extends Chew
 		MessageUtility.logGetter(this.getName(), "getAge", age);
 		return this.age;
 	}
+	
+	public void dircheck(Point p)
+	{
+		if(start.checkx(p)==true)
+		{
+			super.setX_dir(1);
+		}
+		else
+		{
+			super.setX_dir(-1);
+		}
+	}
+	
+	
+	
 }

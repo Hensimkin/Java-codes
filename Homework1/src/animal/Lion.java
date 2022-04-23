@@ -7,7 +7,12 @@ import diet.IDiet;
 import utilities.MessageUtility;
 
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 import java.util.*;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 /**
  * a lion type of animal that extend the roar class
@@ -108,6 +113,42 @@ public class Lion extends Roar
 	public void roar()
 	{
 		MessageUtility.logSound(super.getName(),"Roars, then stretches and shakes its mane");
+	}
+	
+	
+	public void drawObject (Graphics g)
+	{
+		if (super.getColor()=="blue")
+		{
+			g.setColor(Color.blue);
+		}
+		else if(super.getColor()=="red")
+		{
+			g.setColor(Color.red);
+		}
+		else
+		{
+			g.setColor(null);
+		}
+		if(super.getX_dir()==1)
+		{
+			g.drawImage(img1, location.x-size/2, location.y-size/10, size/2, size, pan);
+		}
+		 else // giraffe goes to the left side
+		g.drawImage(img2, location.x, location.y-size/10, size/2, size, pan);
+	}
+	
+	
+	public void dircheck(Point p)
+	{
+		if(start.checkx(p)==true)
+		{
+			super.setX_dir(1);
+		}
+		else
+		{
+			super.setX_dir(-1);
+		}
 	}
 	
 

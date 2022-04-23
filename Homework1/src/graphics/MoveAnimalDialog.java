@@ -111,6 +111,26 @@ public class MoveAnimalDialog extends JDialog implements ActionListener
 					p=new Point(x,y);
 					ZooPanel.array.get(i).setLocation(p);
 					JOptionPane.showMessageDialog(null, "Animal moved");
+					if(ZooPanel.array.get(i) instanceof Lion)
+					{
+						((Lion)ZooPanel.array.get(i)).dircheck(p);
+					}
+					if(ZooPanel.array.get(i) instanceof Bear)
+					{
+						((Bear)ZooPanel.array.get(i)).dircheck(p);
+					}
+					if(ZooPanel.array.get(i) instanceof Giraffe)
+					{
+						((Giraffe)ZooPanel.array.get(i)).dircheck(p);
+					}
+					if(ZooPanel.array.get(i) instanceof Elephant)
+					{
+						((Elephant)ZooPanel.array.get(i)).dircheck(p);
+					}
+					if(ZooPanel.array.get(i) instanceof Turtle)
+					{
+						((Turtle)ZooPanel.array.get(i)).dircheck(p);
+					}
 					dispose();
 				}
 			}

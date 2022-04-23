@@ -25,11 +25,11 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 	private int verSpeed;
 	private boolean coordChanged=false;
 	//private Thread thread;
-	private int x_dir;
-	private int y_dir;
+	private int x_dir=1;
+	private int y_dir=1;
 	private int eatCount=0;
 	private ZooPanel pan;
-	private BufferedImage img1, img2;
+	private BufferedImage img1=null, img2=null;
 	
 	
 	
@@ -176,6 +176,45 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 	public void eatInc()
 	{
 		this.eatCount++;
+	}
+	
+	public void setChanges(boolean state)
+	{
+		coordChanged=state;
+	}
+	
+	
+	public boolean getChanges()
+	{
+		return this.coordChanged;
+	}
+	
+	public String getColor()
+	{
+		return this.col;
+	}
+	
+	public int getX_dir()
+	{
+		return this.x_dir;
+	}
+	
+	
+	public int getY_dir()
+	{
+		return this.y_dir;
+	}
+	
+	
+	public void setX_dir(int num)
+	{
+		this.x_dir=num;
+	}
+	
+	
+	public void setY_dir(int num)
+	{
+		 this.y_dir=num;
 	}
 
 }

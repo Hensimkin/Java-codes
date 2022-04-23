@@ -116,10 +116,6 @@ public class ZooFrame extends JFrame
 		});
 		
 	}
-	public void manageZoo()
-	{
-		
-	}
 	
 }
 

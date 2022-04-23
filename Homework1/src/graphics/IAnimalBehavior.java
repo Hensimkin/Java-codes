@@ -7,6 +7,6 @@ public interface IAnimalBehavior {
 	public int getSize();
 	public void eatInc();
 	public int getEatCount();
-	public boolean getChanges ();
-	public void setChanges (boolean state);
+	public boolean getChanges();
+	public void setChanges(boolean state);
 }

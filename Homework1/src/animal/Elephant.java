@@ -124,6 +124,17 @@ public class Elephant extends Chew
 		return this.trunkLengh;
 	}
 	
+	public void dircheck(Point p)
+	{
+		if(start.checkx(p)==true)
+		{
+			super.setX_dir(1);
+		}
+		else
+		{
+			super.setX_dir(-1);
+		}
+	}
 	
 
 }
