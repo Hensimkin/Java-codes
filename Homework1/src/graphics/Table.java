@@ -7,6 +7,11 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
+/**
+ * The class that take care of info option(which animal is in the zoo)
+ * @author Adir Melker 316614569 and Hen Simkin 208514109
+ *
+ */
 public class Table 
 {
 	JFrame frame;

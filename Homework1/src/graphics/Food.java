@@ -7,6 +7,11 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/**
+ * The class that take care of add food option
+ * @author Adir Melker 316614569 and Hen Simkin 208514109
+ *
+ */
 public class Food extends JFrame
 {
 	Food()
