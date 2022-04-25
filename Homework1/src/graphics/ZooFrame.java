@@ -82,8 +82,6 @@ public class ZooFrame extends JFrame
 					System.out.println("Cant load picture");
 				}
 				*/
-				m.setpic("savanna.png");
-				m.repaint();
 				
 			}
 		
