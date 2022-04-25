@@ -1,6 +1,10 @@
 package animal;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import diet.*;
 import food.*;
@@ -215,6 +219,24 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 	public void setY_dir(int num)
 	{
 		 this.y_dir=num;
+	}
+	
+	public BufferedImage getBufferedImage()
+	{
+		return img1;
+	}
+	
+	public void setBufferedImage()
+	{
+		try
+		{
+			img1=ImageIO.read(new File(PICTURE_PATH));
+		}
+		catch(IOException e)
+		{
+			System.out.println("Cant load picture");
+		}
+		
 	}
 
 }

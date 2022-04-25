@@ -118,6 +118,7 @@ public class Lion extends Roar
 	
 	public void drawObject (Graphics g)
 	{
+		/*
 		if (super.getColor()=="blue")
 		{
 			g.setColor(Color.blue);
@@ -136,6 +137,7 @@ public class Lion extends Roar
 		}
 		 else // giraffe goes to the left side
 		g.drawImage(img2, location.x, location.y-size/10, size/2, size, pan);
+		*/
 	}
 	
 	
@@ -153,7 +155,13 @@ public class Lion extends Roar
 	
 
 	
-	
+	public void loadImages(String nm)
+	{
+		try
+		{
+			
+		}
+	}
 
 
 

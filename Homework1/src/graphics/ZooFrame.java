@@ -2,7 +2,11 @@ package graphics;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import animal.*;
 import diet.*;
@@ -22,9 +26,11 @@ public class ZooFrame extends JFrame
 	
 	static JFrame frame;
 	static JLabel label;
-	static ImageIcon pic;
+	//static ImageIcon pic;
+	
 	public static void main(String[] args) 
 	{
+		
 		ZooPanel m=new ZooPanel();
 		frame = new JFrame("Zoo");
 		frame.setVisible(true);
@@ -54,12 +60,10 @@ public class ZooFrame extends JFrame
 		image.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				/*
-				label.setBackground(Color.white);
-				ImageIcon zoo = new ImageIcon("savanna.png"); 
-				label.setIcon(zoo);
-				*/
-				
+				m.setpic("savanna.png");
+				m.repaint();
+				m.setVisible(true);
+				frame.setVisible(true);
 			}
 		});
 		JMenuItem green=new JMenuItem("Green");

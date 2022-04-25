@@ -3,8 +3,12 @@ package graphics;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import animal.*;
 import diet.*;
@@ -33,6 +37,8 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 	AddAnimalDialog a;
 	String name;
 	Table z;
+	private static final String BACKGROUND_PATH="C:\\Users\\hanig\\Desktop\\assignment2_pictures";
+	static BufferedImage pic=null;
 	//static Animal[] array=new Animal[10];
 	static ArrayList<Animal> array=new ArrayList<Animal>(10);
 	JTable table;
@@ -147,13 +153,33 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 	
 	public void paintComponent(Graphics g)
 	{
-		
+		super.paintComponent(g);
+		if(pic!=null)
+		{
+			g.setColor(null);
+			g.drawImage(pic,0,0,getWidth(),getHeight(), this);
+		}
 	}
 	
 	static public boolean isChanged()
 	{
 		return true;
 	}
+	
+	
+	public void  setpic(String pic1)
+	{
+		try
+		{
+			pic = ImageIO.read(new File(BACKGROUND_PATH+"//"+pic1)); 
+		}
+		
+		 catch (IOException e) 
+		{
+		    System.out.println("Cannot load image"); 
+		}
+	}
+	
 
 	
 	
