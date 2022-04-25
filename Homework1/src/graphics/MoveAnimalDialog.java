@@ -39,7 +39,7 @@ public class MoveAnimalDialog extends JDialog implements ActionListener
 		Object ob;
 		for (int i=0;i<AddAnimalDialog.i;i++)
 		{
-			ob=ZooPanel.array.get(i);
+			ob=ZooPanel22.array.get(i);
 			if(ob instanceof Lion)
 			{
 				animals[i]=ob.getClass().getSimpleName()+lionc;
@@ -105,31 +105,31 @@ public class MoveAnimalDialog extends JDialog implements ActionListener
 			type=(String)allAniaml.getSelectedItem();
 			for(int i=0;i<AddAnimalDialog.i;i++)
 			{
-				f=ZooPanel.array.get(i).getName();
+				f=ZooPanel22.array.get(i).getName();
 				if(f.equals(type))
 				{
 					p=new Point(x,y);
-					ZooPanel.array.get(i).setLocation(p);
+					ZooPanel22.array.get(i).setLocation(p);
 					JOptionPane.showMessageDialog(null, "Animal moved");
-					if(ZooPanel.array.get(i) instanceof Lion)
+					if(ZooPanel22.array.get(i) instanceof Lion)
 					{
-						((Lion)ZooPanel.array.get(i)).dircheck(p);
+						((Lion)ZooPanel22.array.get(i)).dircheck(p);
 					}
-					if(ZooPanel.array.get(i) instanceof Bear)
+					if(ZooPanel22.array.get(i) instanceof Bear)
 					{
-						((Bear)ZooPanel.array.get(i)).dircheck(p);
+						((Bear)ZooPanel22.array.get(i)).dircheck(p);
 					}
-					if(ZooPanel.array.get(i) instanceof Giraffe)
+					if(ZooPanel22.array.get(i) instanceof Giraffe)
 					{
-						((Giraffe)ZooPanel.array.get(i)).dircheck(p);
+						((Giraffe)ZooPanel22.array.get(i)).dircheck(p);
 					}
-					if(ZooPanel.array.get(i) instanceof Elephant)
+					if(ZooPanel22.array.get(i) instanceof Elephant)
 					{
-						((Elephant)ZooPanel.array.get(i)).dircheck(p);
+						((Elephant)ZooPanel22.array.get(i)).dircheck(p);
 					}
-					if(ZooPanel.array.get(i) instanceof Turtle)
+					if(ZooPanel22.array.get(i) instanceof Turtle)
 					{
-						((Turtle)ZooPanel.array.get(i)).dircheck(p);
+						((Turtle)ZooPanel22.array.get(i)).dircheck(p);
 					}
 					dispose();
 				}

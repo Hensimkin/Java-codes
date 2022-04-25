@@ -23,8 +23,9 @@ import zoo.*;
  * @author Adir Melker 316614569 and Hen Simkin 208514109
  *
  */
-public class ZooPanel extends JPanel implements Runnable ,ActionListener
+public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 {
+	JPanel jj;
 	int i=0;
 	Plant plant=null;
 	JButton addanimal;
@@ -37,8 +38,9 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 	AddAnimalDialog a;
 	String name;
 	Table z;
+	Color c=null;
 	private static final String BACKGROUND_PATH="C:\\Users\\hanig\\Desktop\\assignment2_pictures";
-	static BufferedImage pic=null;
+	private BufferedImage pic=null;
 	//static Animal[] array=new Animal[10];
 	static ArrayList<Animal> array=new ArrayList<Animal>(10);
 	JTable table;
@@ -51,9 +53,10 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 	/**
 	 * Default Contractor that add buttons to the panel 
 	 */
-	public ZooPanel()
+	public ZooPanel1()
 	{
-		
+		jj=new JPanel(new FlowLayout());
+		this.setLayout(new BorderLayout());
 		addanimal=new JButton("Add Animal");
 		addanimal.addActionListener(this);
 		moveanimal=new JButton("Move Animal");
@@ -72,13 +75,14 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 		food.setFocusable(false);
 		info.setFocusable(false);
 		exit.setFocusable(false);
-		this.setBackground(Color.blue);
-		this.add(addanimal);
-		this.add(moveanimal);
-		this.add(clear);
-		this.add(food);
-		this.add(info);
-		this.add(exit);
+		jj.add(addanimal);
+		jj.add(moveanimal);
+		jj.add(clear);
+		jj.add(food);
+		jj.add(info);
+		jj.add(exit);
+		this.setLayout(new BorderLayout());
+		this.add(jj,BorderLayout.SOUTH);
 	}
 	
 	
@@ -107,12 +111,12 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 			array.clear();
 			for(int i=0;i<AddAnimalDialog.i;i++)
 			{
-				ZooPanel.data[i][0]=null;
-				ZooPanel.data[i][1]=null;
-				ZooPanel.data[i][2]=null;
-				ZooPanel.data[i][3]=null;
-				ZooPanel.data[i][4]=null;
-				ZooPanel.data[i][5]=null;
+				ZooPanel1.data[i][0]=null;
+				ZooPanel1.data[i][1]=null;
+				ZooPanel1.data[i][2]=null;
+				ZooPanel1.data[i][3]=null;
+				ZooPanel1.data[i][4]=null;
+				ZooPanel1.data[i][5]=null;
 			}
 			AddAnimalDialog.i=0;
 			
@@ -154,7 +158,20 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 	public void paintComponent(Graphics g)
 	{
 		super.paintComponent(g);
-		if(pic!=null)
+		if(pic==null)
+		{
+			if(c==Color.green)
+			{
+				g.setColor(Color.GREEN);
+				g.fillRect(0, 0, getWidth(),getHeight());
+			}
+			if(c==Color.white)
+			{
+				g.setColor(Color.WHITE);
+				g.fillRect(0, 0, getWidth(),getHeight());
+			}
+		}
+		else
 		{
 			g.setColor(null);
 			g.drawImage(pic,0,0,getWidth(),getHeight(), this);
@@ -165,7 +182,6 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 	{
 		return true;
 	}
-	
 	
 	public void  setpic(String pic1)
 	{
@@ -180,9 +196,19 @@ public class ZooPanel extends JPanel implements Runnable ,ActionListener
 		}
 	}
 	
-
+	public void setGreen()
+	{
+		this.pic=null;
+		c=Color.green;
+	}
 	
-	
+	public void setNatural()
+	{
+		this.pic=null;
+		c=Color.white;
+	}
 	
 	
 }
+
+

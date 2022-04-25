@@ -32,7 +32,7 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 	private int x_dir=1;
 	private int y_dir=1;
 	private int eatCount=0;
-	private ZooPanel pan;
+	private ZooPanel22 pan;
 	private BufferedImage img1=null, img2=null;
 	
 	

@@ -23,21 +23,23 @@ import zoo.*;
  */
 public class ZooFrame extends JFrame
 {
-	
+	private static final String BACKGROUND_PATH="C:\\Users\\hanig\\Desktop\\assignment2_pictures";
 	static JFrame frame;
 	static JLabel label;
-	//static ImageIcon pic;
-	
+	static BufferedImage pic2=null;
+	static ImageIcon pic3;
+	static Image pic4;
 	public static void main(String[] args) 
 	{
 		
-		ZooPanel m=new ZooPanel();
+		ZooPanel1 m=new ZooPanel1();
+		//ZooPanel22 m2=new ZooPanel22();
 		frame = new JFrame("Zoo");
 		frame.setVisible(true);
 		frame.setSize(800,600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
-		frame.add(m,BorderLayout.SOUTH);
+		frame.add(m,BorderLayout.PAGE_END);
 		label=new JLabel();
 		frame.add(label);
 		JMenuBar menuBar=new JMenuBar();
@@ -60,23 +62,47 @@ public class ZooFrame extends JFrame
 		image.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
+				/*
+				try
+				{
+					
+					
+					frame.getContentPane().setBackground(null);
+		            pic2 = ImageIO.read(new File("savanna.png"));
+		            label.setBounds(0,0,800,600);
+		            Image pic4 = pic2.getScaledInstance(800, 600, java.awt.Image.SCALE_SMOOTH);
+		            pic3 = new ImageIcon(pic4);
+		            label.setIcon(pic3);
+		            frame.getContentPane().add(label);
+		            
+				}
+			
+				catch(IOException a)
+				{
+					System.out.println("Cant load picture");
+				}
+				*/
 				m.setpic("savanna.png");
 				m.repaint();
-				m.setVisible(true);
-				frame.setVisible(true);
+				
 			}
+		
 		});
 		JMenuItem green=new JMenuItem("Green");
 		background.add(green);
 		green.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				frame.getContentPane().setBackground(Color.green);
+				//ZooPanel m2=new ZooPanel();
 				/*
-				label.setIcon(null);
-				label.setBackground(Color.GREEN);
-				label.setOpaque(true);
+				m.setGreen();
+				m.repaint();
+				m.setVisible(true);
+				//frame.add(m2);
+				frame.setVisible(true);
 				*/
+				frame.remove(label);
+				frame.getContentPane().setBackground(Color.green);
 			}
 		});
 		JMenuItem none=new JMenuItem("None");
@@ -85,12 +111,14 @@ public class ZooFrame extends JFrame
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				frame.getContentPane().setBackground(null);
 				/*
-				label.setIcon(null);
-				label.setBackground(Color.white);
-				label.setOpaque(false);
+				m.setNatural();
+				m.repaint();
+				m.setVisible(true);
+				frame.setVisible(true);
 				*/
+				frame.remove(label);
+				frame.getContentPane().setBackground(null);
 			}
 		});
 		JMenuItem help2=new JMenuItem("Help");
@@ -121,5 +149,31 @@ public class ZooFrame extends JFrame
 		
 	}
 	
+	
+	
+	public void paintComponent(Graphics g)
+	{
+		super.paintComponents(g);
+		if(pic2!=null)
+		{
+			g.setColor(null);
+			g.drawImage(pic2,0,0,getWidth(),getHeight(), this);
+		}
+	}
+	
+	 
+	 
+	 public void  setpic(String pic1)
+		{
+			try
+			{
+				pic2 = ImageIO.read(new File(BACKGROUND_PATH+"//"+pic1)); 
+			}
+			
+			 catch (IOException e) 
+			{
+			    System.out.println("Cannot load image"); 
+			}
+		}
 }
 

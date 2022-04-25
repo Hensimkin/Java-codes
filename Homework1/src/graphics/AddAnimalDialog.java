@@ -172,13 +172,13 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 						//MoveAnimalDialog.allAniaml.addItem(name);
 						size=(int) (size*0.8);
 						object=new Lion(name,size,c,num1,num2);
-						ZooPanel.array.add(object);
-						ZooPanel.data[i][0]=type;
-						ZooPanel.data[i][1]=c;
-						ZooPanel.data[i][2]=object.getWeight();
-						ZooPanel.data[i][3]=num1;
-						ZooPanel.data[i][4]=num2;
-						ZooPanel.data[i][5]=object.getEatCount();
+						ZooPanel1.array.add(object);
+						ZooPanel1.data[i][0]=type;
+						ZooPanel1.data[i][1]=c;
+						ZooPanel1.data[i][2]=object.getWeight();
+						ZooPanel1.data[i][3]=num1;
+						ZooPanel1.data[i][4]=num2;
+						ZooPanel1.data[i][5]=object.getEatCount();
 						i++;
 					}
 					if(type=="Bear")
@@ -187,13 +187,13 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 						//MoveAnimalDialog.allAniaml.addItem(name);
 						size=(int) (size*1.5);
 						object=new Bear(name,size,c,num1,num2);
-						ZooPanel.array.add(object);
-						ZooPanel.data[i][0]=type;
-						ZooPanel.data[i][1]=c;
-						ZooPanel.data[i][2]=object.getWeight();
-						ZooPanel.data[i][3]=num1;
-						ZooPanel.data[i][4]=num2;
-						ZooPanel.data[i][5]=object.getEatCount();
+						ZooPanel1.array.add(object);
+						ZooPanel1.data[i][0]=type;
+						ZooPanel1.data[i][1]=c;
+						ZooPanel1.data[i][2]=object.getWeight();
+						ZooPanel1.data[i][3]=num1;
+						ZooPanel1.data[i][4]=num2;
+						ZooPanel1.data[i][5]=object.getEatCount();
 						i++;
 					}
 					if(type=="Elephant")
@@ -202,13 +202,13 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 						//MoveAnimalDialog.allAniaml.addItem(name);
 						size=(int) (size*10);
 						object=new Elephant(name,size,c,num1,num2);
-						ZooPanel.array.add(object);
-						ZooPanel.data[i][0]=type;
-						ZooPanel.data[i][1]=c;
-						ZooPanel.data[i][2]=object.getWeight();
-						ZooPanel.data[i][3]=num1;
-						ZooPanel.data[i][4]=num2;
-						ZooPanel.data[i][5]=object.getEatCount();
+						ZooPanel1.array.add(object);
+						ZooPanel1.data[i][0]=type;
+						ZooPanel1.data[i][1]=c;
+						ZooPanel1.data[i][2]=object.getWeight();
+						ZooPanel1.data[i][3]=num1;
+						ZooPanel1.data[i][4]=num2;
+						ZooPanel1.data[i][5]=object.getEatCount();
 						i++;
 					}
 					if(type=="Giraffe")
@@ -217,13 +217,13 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 						//MoveAnimalDialog.allAniaml.addItem(name);
 						size=(int) (size*2.2);
 						object=new Giraffe(name,size,c,num1,num2);
-						ZooPanel.array.add(object);
-						ZooPanel.data[i][0]=type;
-						ZooPanel.data[i][1]=c;
-						ZooPanel.data[i][2]=object.getWeight();
-						ZooPanel.data[i][3]=num1;
-						ZooPanel.data[i][4]=num2;
-						ZooPanel.data[i][5]=object.getEatCount();
+						ZooPanel1.array.add(object);
+						ZooPanel1.data[i][0]=type;
+						ZooPanel1.data[i][1]=c;
+						ZooPanel1.data[i][2]=object.getWeight();
+						ZooPanel1.data[i][3]=num1;
+						ZooPanel1.data[i][4]=num2;
+						ZooPanel1.data[i][5]=object.getEatCount();
 						i++;
 					}
 					if(type=="Turtle")
@@ -232,13 +232,13 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 						//MoveAnimalDialog.allAniaml.addItem(name);
 						size=(int) (size*0.5);
 						object=new Turtle(name,size,c,num1,num2);
-						ZooPanel.array.add(object);
-						ZooPanel.data[i][0]=type;
-						ZooPanel.data[i][1]=c;
-						ZooPanel.data[i][2]=object.getWeight();
-						ZooPanel.data[i][3]=num1;
-						ZooPanel.data[i][4]=num2;
-						ZooPanel.data[i][5]=object.getEatCount();
+						ZooPanel1.array.add(object);
+						ZooPanel1.data[i][0]=type;
+						ZooPanel1.data[i][1]=c;
+						ZooPanel1.data[i][2]=object.getWeight();
+						ZooPanel1.data[i][3]=num1;
+						ZooPanel1.data[i][4]=num2;
+						ZooPanel1.data[i][5]=object.getEatCount();
 						i++;
 					}
 					JOptionPane.showMessageDialog(null, "Animal added");
