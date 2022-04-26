@@ -1,5 +1,6 @@
 package animal;
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -32,7 +33,7 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 	private int x_dir=1;
 	private int y_dir=1;
 	private int eatCount=0;
-	private ZooPanel22 pan;
+	private ZooPanel1 pan;
 	private BufferedImage img1=null, img2=null;
 	
 	
@@ -171,6 +172,11 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 		return this.name;
 	}
 	
+	public String getPicturePatch()
+	{
+		return this.PICTURE_PATH;
+	}
+	
 	public int getSize()
 	{
 		return this.size;
@@ -221,9 +227,14 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 		 this.y_dir=num;
 	}
 	
-	public BufferedImage getBufferedImage()
+	public BufferedImage getBufferedImage1()
 	{
-		return img1;
+		return this.img1;
+	}
+	
+	public BufferedImage getBufferedImage2()
+	{
+		return this.img2;
 	}
 	
 	public void setBufferedImage()
@@ -237,6 +248,52 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 			System.out.println("Cant load picture");
 		}
 		
+	}
+	
+	public void drawObject (Graphics g)
+	{
+		 if(this.x_dir==1) 
+		g.drawImage(img1, this.getLocation().getX()-this.size/2, this.getLocation().getY()-this.size/10, this.size/2, this.size, this.pan);
+		 else 
+		g.drawImage(img2, getLocation().getX(), this.getLocation().getY()-this.size/10, this.size/2, this.size, this.pan);
+	}
+	
+	
+	public ZooPanel1 getPanel()
+    {
+		return this.pan;
+	}
+	
+	
+	public void setPanel(ZooPanel1 z)
+    {
+		this.pan=z;
+	}
+	
+	public void loadImages(String nm)
+	{
+		try
+        {
+			if(this.col=="Blue")
+			{
+				this.img1 = ImageIO.read(new File(IDrawable.PICTURE_PATH+"\\"+nm+"_b_1.png"));
+				this.img2 = ImageIO.read(new File(IDrawable.PICTURE_PATH+"\\"+nm+"_b_2.png"));
+			}
+			if(this.col=="Red")
+			{
+				this.img1 = ImageIO.read(new File(IDrawable.PICTURE_PATH+"\\"+nm+"_r_1.png"));
+				this.img2 = ImageIO.read(new File(IDrawable.PICTURE_PATH+"\\"+nm+"_r_2.png"));
+			}
+			if(this.col=="Natural")
+			{
+				this.img1 = ImageIO.read(new File(IDrawable.PICTURE_PATH+"\\"+nm+"_n_1.png"));
+				this.img2 = ImageIO.read(new File(IDrawable.PICTURE_PATH+"\\"+nm+"_n_2.png"));
+			}
+        }
+        catch (IOException e)
+        {
+            System.out.println("Cannot load image");
+        }
 	}
 
 }

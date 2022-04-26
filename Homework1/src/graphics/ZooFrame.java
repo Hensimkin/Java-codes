@@ -24,7 +24,7 @@ import zoo.*;
 public class ZooFrame extends JFrame implements ActionListener
 {
 	private static final String BACKGROUND_PATH="C:\\Users\\hanig\\Desktop\\assignment2_pictures";
-	static JFrame frame;
+	//static JFrame frame;
 	static JLabel label;
 	static BufferedImage pic2=null;
 	static ImageIcon pic3;
@@ -39,25 +39,22 @@ public class ZooFrame extends JFrame implements ActionListener
 	private JMenuItem help2;
 
 	
-	public static void main(String[] args)
-	{
-		ZooFrame n=new ZooFrame();
-	}
+	
 	
 	public ZooFrame()
 	{
 		ZooPanel1 m=new ZooPanel1();
 		//ZooPanel22 m2=new ZooPanel22();
-		frame = new JFrame("Zoo");
-		frame.setVisible(true);
-		frame.setSize(800,600);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setLocationRelativeTo(null);
-		frame.add(m,BorderLayout.PAGE_END);
+		this.setName("Zoo");
+		this.setVisible(true);
+		this.setSize(800,600);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		this.add(m,BorderLayout.PAGE_END);
 		label=new JLabel();
-		frame.add(label);
+		this.add(label);
 		JMenuBar menuBar=new JMenuBar();
-		frame.setJMenuBar(menuBar);
+		this.setJMenuBar(menuBar);
 		JMenu file=new JMenu("File");
 		menuBar.add(file);
 		JMenu background=new JMenu("Background");
@@ -66,19 +63,19 @@ public class ZooFrame extends JFrame implements ActionListener
 		menuBar.add(help);
 		exit=new JMenuItem("Exit");
 		file.add(exit);
-		exit.addActionListener((ActionListener) this);
-		JMenuItem image=new JMenuItem("Image");
+		exit.addActionListener(this);
+		image=new JMenuItem("Image");
 		background.add(image);
-		image.addActionListener((ActionListener) this);
+		image.addActionListener(this);
 		green=new JMenuItem("Green");
 		background.add(green);
-		green.addActionListener((ActionListener) this);
+		green.addActionListener( this);
 		none=new JMenuItem("None");
 		background.add(none);
-		none.addActionListener((ActionListener) this);
+		none.addActionListener( this);
 		help2=new JMenuItem("Help");
 		help.add(help2);
-		help2.addActionListener((ActionListener) this);		
+		help2.addActionListener(this);		
 		
 	}
 	
@@ -92,26 +89,24 @@ public class ZooFrame extends JFrame implements ActionListener
 		
 		if (e.getSource()==image)
 		{
-			/*
 			try
 			{
 				
+				this.getContentPane().setBackground(null);
+				pic2 = ImageIO.read(new File("C:\\Users\\hanig\\Desktop\\assignment2_pictures\\savanna.png"));
+				label.setBounds(0,0,800,600);
+				Image pic4 = pic2.getScaledInstance(800, 600, java.awt.Image.SCALE_SMOOTH);
+				pic3 = new ImageIcon(pic4);
+				label.setIcon(pic3);
+				this.getContentPane().add(label);
 				
-				frame.getContentPane().setBackground(null);
-	            pic2 = ImageIO.read(new File("savanna.png"));
-	            label.setBounds(0,0,800,600);
-	            Image pic4 = pic2.getScaledInstance(800, 600, java.awt.Image.SCALE_SMOOTH);
-	            pic3 = new ImageIcon(pic4);
-	            label.setIcon(pic3);
-	            frame.getContentPane().add(label);
-	            
-			}
-		
-			catch(IOException a)
-			{
+				//this.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("savanna.png")))));
+		        
+		    }
+			catch(IOException ef)
+		    {
 				System.out.println("Cant load picture");
-			}
-			*/
+		    }
 		}
 		
 		if(e.getSource()==green)
@@ -124,8 +119,8 @@ public class ZooFrame extends JFrame implements ActionListener
 			//frame.add(m2);
 			frame.setVisible(true);
 			*/
-			frame.remove(label);
-			frame.getContentPane().setBackground(Color.green);
+			this.remove(label);
+			this.getContentPane().setBackground(Color.green);
 		}
 		
 		if(e.getSource()==none)
@@ -136,8 +131,8 @@ public class ZooFrame extends JFrame implements ActionListener
 			m.setVisible(true);
 			frame.setVisible(true);
 			*/
-			frame.remove(label);
-			frame.getContentPane().setBackground(null);
+			this.remove(label);
+			this.getContentPane().setBackground(null);
 		}
 		
 		if(e.getSource()==help2)
@@ -161,6 +156,11 @@ public class ZooFrame extends JFrame implements ActionListener
 			});
 		}
 		
+	}
+	
+	public static void main(String[] args)
+	{
+		ZooFrame n=new ZooFrame();
 	}
 		
 		

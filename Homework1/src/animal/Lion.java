@@ -116,29 +116,7 @@ public class Lion extends Roar
 	}
 	
 	
-	public void drawObject (Graphics g)
-	{
-		/*
-		if (super.getColor()=="blue")
-		{
-			g.setColor(Color.blue);
-		}
-		else if(super.getColor()=="red")
-		{
-			g.setColor(Color.red);
-		}
-		else
-		{
-			g.setColor(null);
-		}
-		if(super.getX_dir()==1)
-		{
-			g.drawImage(img1, location.x-size/2, location.y-size/10, size/2, size, pan);
-		}
-		 else // giraffe goes to the left side
-		g.drawImage(img2, location.x, location.y-size/10, size/2, size, pan);
-		*/
-	}
+	
 	
 	
 	public void dircheck(Point p)

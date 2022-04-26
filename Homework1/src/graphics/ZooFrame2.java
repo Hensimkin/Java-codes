@@ -21,6 +21,8 @@ import zoo.*;
  * @author Adir Melker 316614569 and Hen Simkin 208514109
  *
  */
+
+/*
 public class ZooFrame2 extends JFrame
 {
 	private static final String BACKGROUND_PATH="C:\\Users\\hanig\\Desktop\\assignment2_pictures";
@@ -62,7 +64,7 @@ public class ZooFrame2 extends JFrame
 		JMenuItem image=new JMenuItem("Image");
 		background.add(image);
 		image.addActionListener(new ActionListener() {
-			
+			*/
 			public void actionPerformed(ActionEvent e) {
 				/*
 				try
@@ -88,6 +90,7 @@ public class ZooFrame2 extends JFrame
 			}
 		
 		});
+		
 		JMenuItem green=new JMenuItem("Green");
 		background.add(green);
 		green.addActionListener(new ActionListener() {
@@ -149,7 +152,7 @@ public class ZooFrame2 extends JFrame
 		
 	}
 	
-	
+
 	
 	public void paintComponent(Graphics g)
 	{

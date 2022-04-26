@@ -94,8 +94,9 @@ public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 		{
 			if (AddAnimalDialog.i!=10)
 			{
-				a=new AddAnimalDialog();
+				a=new AddAnimalDialog(this);
 				i++;
+				manageZoo();
 			}
 			else
 			{
@@ -140,6 +141,7 @@ public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 			else
 			{
 				MoveAnimalDialog m=new MoveAnimalDialog();
+				manageZoo();
 			}
 		}
 		if (e.getSource()==food)
@@ -151,37 +153,22 @@ public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 	
 	public void manageZoo()
 	{
-		
+		if (isChange()==true)
+			repaint();
 	}
 	
 	
 	public void paintComponent(Graphics g)
 	{
 		super.paintComponent(g);
-		if(pic==null)
-		{
-			if(c==Color.green)
-			{
-				g.setColor(Color.GREEN);
-				g.fillRect(0, 0, getWidth(),getHeight());
-			}
-			if(c==Color.white)
-			{
-				g.setColor(Color.WHITE);
-				g.fillRect(0, 0, getWidth(),getHeight());
-			}
-		}
-		else
-		{
-			g.setColor(null);
-			g.drawImage(pic,0,0,getWidth(),getHeight(), this);
-		}
+		array.get(0).drawObject(g);
 	}
-	
+	/*
 	static public boolean isChanged()
 	{
 		return true;
 	}
+	*/
 	
 	public void  setpic(String pic1)
 	{
@@ -208,7 +195,18 @@ public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 		c=Color.white;
 	}
 	
-	
+	public boolean isChange()
+	{
+		for(int counter = 0; counter < array.size(); counter++)
+		{
+			if(array.get(counter).getChanges()==true)
+			{
+				array.get(counter).setChanges(false);
+				return true;
+			}
+		}
+		return false;
+	}
 }
 
 
