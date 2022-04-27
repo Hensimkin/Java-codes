@@ -132,14 +132,6 @@ public class Lion extends Roar
 	}
 	
 
-	
-	public void loadImages(String nm)
-	{
-		try
-		{
-			
-		}
-	}
 
 
 

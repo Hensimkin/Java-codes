@@ -52,7 +52,7 @@ public class ZooFrame extends JFrame implements ActionListener
 		this.setLocationRelativeTo(null);
 		this.add(m,BorderLayout.PAGE_END);
 		label=new JLabel();
-		this.add(label);
+		//this.add(label);
 		JMenuBar menuBar=new JMenuBar();
 		this.setJMenuBar(menuBar);
 		JMenu file=new JMenu("File");
