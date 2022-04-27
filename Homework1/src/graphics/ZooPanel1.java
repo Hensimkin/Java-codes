@@ -197,14 +197,23 @@ public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 	
 	public boolean isChange()
 	{
+		if(array.get(0).getChanges()==true)
+		{
+			array.get(0).setChanges(false);
+			return true;
+		}
+		/*
 		for(int counter = 0; counter < array.size(); counter++)
 		{
+			
 			if(array.get(counter).getChanges()==true)
 			{
 				array.get(counter).setChanges(false);
 				return true;
 			}
+			
 		}
+		*/
 		return false;
 	}
 }

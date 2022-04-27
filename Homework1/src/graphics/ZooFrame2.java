@@ -64,7 +64,7 @@ public class ZooFrame2 extends JFrame
 		JMenuItem image=new JMenuItem("Image");
 		background.add(image);
 		image.addActionListener(new ActionListener() {
-			*/
+			
 			public void actionPerformed(ActionEvent e) {
 				/*
 				try
@@ -151,9 +151,7 @@ public class ZooFrame2 extends JFrame
 		});
 		
 	}
-	
-
-	
+	*/
 	public void paintComponent(Graphics g)
 	{
 		super.paintComponents(g);
