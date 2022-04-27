@@ -47,7 +47,7 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 	 */
 	public AddAnimalDialog(ZooPanel1 zoo)
 	{
-		//super();
+		super();
 		button=new JButton("Accept");
 		button.addActionListener(this);
 		JLabel label=new JLabel("Choose animal");
@@ -93,6 +93,7 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 	/**
 	 * check what the user select (which animal,horizontal and vertical speed,size color) 
 	 */
+	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
 		if(e.getSource()==list)
@@ -171,11 +172,10 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 						name="Lion"+lionc;
 						//MoveAnimalDialog.allAniaml.addItem(name);
 						size=(int) (size*0.8);
-						object=new Lion(name,size,c,num1,num2);
-						object.setPanel(zoo);
-						object.setChanges(true);
-						object.loadImages("lio");
+						object=new Lion(name,size,c,num1,num2,zoo);
+						//object.setPanel(zoo);
 						ZooPanel1.array.add(object);
+						//ZooPanel1.repaint();
 						ZooPanel1.data[i][0]=type;
 						ZooPanel1.data[i][1]=c;
 						ZooPanel1.data[i][2]=object.getWeight();
@@ -192,6 +192,7 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 						object=new Bear(name,size,c,num1,num2);
 						object.setPanel(zoo);
 						object.setChanges(true);
+						object.loadImages("bea");
 						ZooPanel1.array.add(object);
 						ZooPanel1.data[i][0]=type;
 						ZooPanel1.data[i][1]=c;
@@ -209,6 +210,7 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 						object=new Elephant(name,size,c,num1,num2);
 						object.setPanel(zoo);
 						object.setChanges(true);
+						object.loadImages("elf");
 						ZooPanel1.array.add(object);
 						ZooPanel1.data[i][0]=type;
 						ZooPanel1.data[i][1]=c;
@@ -225,6 +227,7 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 						size=(int) (size*2.2);
 						object=new Giraffe(name,size,c,num1,num2);
 						object.setPanel(zoo);
+						object.loadImages("grf");
 						object.setChanges(true);
 						ZooPanel1.array.add(object);
 						ZooPanel1.data[i][0]=type;
@@ -242,6 +245,7 @@ public class AddAnimalDialog extends JDialog implements ActionListener
 						size=(int) (size*0.5);
 						object=new Turtle(name,size,c,num1,num2);
 						object.setPanel(zoo);
+						object.loadImages("trt");
 						object.setChanges(true);
 						ZooPanel1.array.add(object);
 						ZooPanel1.data[i][0]=type;

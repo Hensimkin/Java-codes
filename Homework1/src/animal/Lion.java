@@ -2,6 +2,7 @@ package animal;
 import diet.Carnivore;
 import food.EFoodType;
 import food.IEdible;
+import graphics.ZooPanel1;
 import mobility.*;
 import diet.IDiet;
 import utilities.MessageUtility;
@@ -24,7 +25,7 @@ public class Lion extends Roar
 	private final static Point start=new Point(20,0);
 	private final static IDiet diet=new Carnivore();
 	private int scarCount=0;
-	
+	private ZooPanel1 z;
 	
 	/**
 	 * a contractor the give the animal a name
@@ -38,11 +39,15 @@ public class Lion extends Roar
 		super.setDiet(diet);
 	}
 	
-	public Lion(String name,int size,String col,int horSpeed,int verSpeed)
+	public Lion(String name,int size,String col,int horSpeed,int verSpeed,ZooPanel1 z)
 	{
-		super(name,start,size,col,horSpeed,verSpeed);
+		super(name,start,size,col,horSpeed,verSpeed,z);
 		super.setWeight(408.2);
 		super.setDiet(diet);
+		this.z=z;
+		super.loadImages("lio");
+		super.setChanges(true);
+		this.z.repaint();
 	}
 	
 	

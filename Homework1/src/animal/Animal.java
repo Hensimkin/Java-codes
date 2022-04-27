@@ -52,7 +52,7 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 		setName(name);
 	}
 	
-	public Animal(String name,Point point,int size,String col,int horSpeed,int verSpeed)
+	public Animal(String name,Point point,int size,String col,int horSpeed,int verSpeed,ZooPanel1 z)
 	{
 		super(point);
 		this.size=size;
@@ -60,6 +60,7 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 		this.horSpeed=horSpeed;
 		this.verSpeed=verSpeed;
 		this.name=name;
+		this.pan=z;
 	}
 	
 	
@@ -253,9 +254,15 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 	public void drawObject (Graphics g)
 	{
 		 if(this.x_dir==1) 
-		g.drawImage(img1, this.getLocation().getX()-this.size/2, this.getLocation().getY()-this.size/10, this.size/2, this.size, this.pan);
+		 {
+			 g.drawImage(img1, this.getLocation().getX()-this.size/2, this.getLocation().getY()-this.size/10, this.size/2, this.size, this.pan);
+		 }
+		
 		 else 
-		g.drawImage(img2, this.getLocation().getX(), this.getLocation().getY()-this.size/10, this.size/2, this.size, this.pan);
+		 {
+			 g.drawImage(img2, this.getLocation().getX(), this.getLocation().getY()-this.size/10, this.size/2, this.size, this.pan);
+		 }
+		
 	}
 	
 	
@@ -278,18 +285,24 @@ public abstract class Animal  extends Mobile implements  IEdible, IDrawable,IAni
 			{
 				this.img1 = ImageIO.read(new File(IDrawable.PICTURE_PATH+"\\"+nm+"_b_1.png"));
 				this.img2 = ImageIO.read(new File(IDrawable.PICTURE_PATH+"\\"+nm+"_b_2.png"));
+				System.out.println("Anial drawed");
 			}
-			if(this.col=="Red")
+			else if(this.col=="Red")
 			{
 				this.img1 = ImageIO.read(new File(IDrawable.PICTURE_PATH+"\\"+nm+"_r_1.png"));
 				this.img2 = ImageIO.read(new File(IDrawable.PICTURE_PATH+"\\"+nm+"_r_2.png"));
+				System.out.println("Anial drawed");
 			}
-			if(this.col=="Natural")
+			else if(this.col=="Natural")
 			{
 				this.img1 = ImageIO.read(new File(IDrawable.PICTURE_PATH+"\\"+nm+"_n_1.png"));
 				this.img2 = ImageIO.read(new File(IDrawable.PICTURE_PATH+"\\"+nm+"_n_2.png"));
+				System.out.println("Anial drawed");
 			}
-			System.out.println("Anial drawed");
+			else
+			{
+				System.out.println("Anial not drawed");
+			}
         }
         catch (IOException e)
         {

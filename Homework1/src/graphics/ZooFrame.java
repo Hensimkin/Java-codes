@@ -44,7 +44,6 @@ public class ZooFrame extends JFrame implements ActionListener
 	public ZooFrame()
 	{
 		ZooPanel1 m=new ZooPanel1();
-		//ZooPanel22 m2=new ZooPanel22();
 		this.setName("Zoo");
 		this.setVisible(true);
 		this.setSize(800,600);
@@ -76,7 +75,6 @@ public class ZooFrame extends JFrame implements ActionListener
 		help2=new JMenuItem("Help");
 		help.add(help2);
 		help2.addActionListener(this);		
-		
 	}
 	
 	public void actionPerformed(ActionEvent e) 
@@ -89,7 +87,7 @@ public class ZooFrame extends JFrame implements ActionListener
 		
 		if (e.getSource()==image)
 		{
-			/*
+			
 			try
 			{
 				
@@ -108,7 +106,7 @@ public class ZooFrame extends JFrame implements ActionListener
 		    {
 				System.out.println("Cant load picture");
 		    }
-		    */
+		    
 		}
 		
 		if(e.getSource()==green)
@@ -120,10 +118,10 @@ public class ZooFrame extends JFrame implements ActionListener
 			m.setVisible(true);
 			//frame.add(m2);
 			frame.setVisible(true);
-			
+			*/
 			this.remove(label);
 			this.getContentPane().setBackground(Color.green);
-			*/
+			
 		}
 		
 		if(e.getSource()==none)
@@ -133,10 +131,10 @@ public class ZooFrame extends JFrame implements ActionListener
 			m.repaint();
 			m.setVisible(true);
 			frame.setVisible(true);
-			
+			*/
 			this.remove(label);
 			this.getContentPane().setBackground(null);
-			*/
+			
 		}
 		
 		if(e.getSource()==help2)

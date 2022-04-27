@@ -2,6 +2,7 @@ package animal;
 
 import java.awt.Color;
 
+import graphics.ZooPanel1;
 import mobility.Point;
 
 /**
@@ -17,9 +18,9 @@ public  abstract class Roar extends Animal
 	}
 	
 	
-	public Roar(String name,Point point,int size,String col,int horSpeed,int verSpeed) 
+	public Roar(String name,Point point,int size,String col,int horSpeed,int verSpeed,ZooPanel1 z) 
 	{
-		super(name,point,size,col,horSpeed,verSpeed);
+		super(name,point,size,col,horSpeed,verSpeed,z);
 	}
 
 	public abstract void roar();

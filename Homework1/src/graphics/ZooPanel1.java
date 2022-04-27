@@ -42,7 +42,8 @@ public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 	private static final String BACKGROUND_PATH="C:\\Users\\hanig\\Desktop\\assignment2_pictures";
 	private BufferedImage pic=null;
 	//static Animal[] array=new Animal[10];
-	static ArrayList<Animal> array=new ArrayList<Animal>(10);
+	//static ArrayList<Animal> array=new ArrayList<Animal>(10);
+	static ArrayList<Animal> array=new ArrayList<Animal>();
 	JTable table;
 	String []col= {"Animal","Color","weight","Hor.Speed","Ver.Speed","Eat Counter"};
 	static Object[][] data= new Object[10][6];
@@ -86,7 +87,7 @@ public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 	}
 	
 	
-	
+	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
 	
@@ -120,18 +121,21 @@ public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 				ZooPanel1.data[i][5]=null;
 			}
 			AddAnimalDialog.i=0;
-			
 		}
 		
 		if(e.getSource()==exit)
 		{
 			System.exit(0);
 		}
+		
+		
 		if (e.getSource()==info)
 		{
 			table=new JTable(data,col);
 			z=new Table(table);
 		}
+		
+		
 		if (e.getSource()==moveanimal)
 		{
 			if (array.isEmpty())
@@ -144,6 +148,8 @@ public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 				manageZoo();
 			}
 		}
+		
+		
 		if (e.getSource()==food)
 		{
 			Food food=new Food();
@@ -157,7 +163,7 @@ public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 			repaint();
 	}
 	
-	
+	@Override
 	public void paintComponent(Graphics g)
 	{
 		super.paintComponent(g);
@@ -169,7 +175,7 @@ public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 		return true;
 	}
 	*/
-	
+	/*
 	public void  setpic(String pic1)
 	{
 		try
@@ -194,26 +200,25 @@ public class ZooPanel1 extends JPanel implements Runnable ,ActionListener
 		this.pic=null;
 		c=Color.white;
 	}
-	
+	*/
 	public boolean isChange()
 	{
+		/*
 		if(array.get(0).getChanges()==true)
 		{
 			array.get(0).setChanges(false);
 			return true;
 		}
-		/*
+		*/
+		
 		for(int counter = 0; counter < array.size(); counter++)
 		{
-			
 			if(array.get(counter).getChanges()==true)
 			{
 				array.get(counter).setChanges(false);
 				return true;
 			}
-			
 		}
-		*/
 		return false;
 	}
 }
